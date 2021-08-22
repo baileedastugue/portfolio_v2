@@ -1,0 +1,13 @@
+/* line 1, src/sass/base/_typography.scss */
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: #3a3b3c; }
+
+/* line 10, src/sass/base/_typography.scss */
+.heading-primary {
+  color: #000;
+  font-size: 2rem;
+  font-family: "Libre Baskerville", serif; }

@@ -1,0 +1,15 @@
+body {
+  font-family: $font-sansserif;
+  font-weight: 300;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: $color-secondary-dark;
+}
+
+.heading {
+  &-primary{
+    color: $color-primary-dark;
+    font-size: 2rem;
+    font-family: $font-serif;
+  }
+}
