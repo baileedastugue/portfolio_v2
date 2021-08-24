@@ -1,0 +1,30 @@
+.text-circular {
+  position: relative;
+  path {
+    fill: none;
+  }
+  svg {
+    display: block;
+    overflow: visible;
+    position: absolute;
+    stroke: black;
+  }
+  &--large {
+    width: 400px;
+    height: 400px;
+    margin: 400px;
+    .heading-primary {
+      font-size: 22px;
+    }
+  }
+  &--medium {
+    width: 160px;
+    height: 160px;
+    margin: 160px;
+  }
+  &--small {
+    width: 100px;
+    height: 100px;
+    margin: 100px;
+  }
+}

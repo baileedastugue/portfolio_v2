@@ -11,3 +11,34 @@ body {
   color: #000;
   font-size: 2rem;
   font-family: "Libre Baskerville", serif; }
+
+/* line 1, src/sass/components/layout/_circletext.scss */
+.text-circular {
+  position: relative; }
+  /* line 3, src/sass/components/layout/_circletext.scss */
+  .text-circular path {
+    fill: none; }
+  /* line 6, src/sass/components/layout/_circletext.scss */
+  .text-circular svg {
+    display: block;
+    overflow: visible;
+    position: absolute;
+    stroke: black; }
+  /* line 12, src/sass/components/layout/_circletext.scss */
+  .text-circular--large {
+    width: 400px;
+    height: 400px;
+    margin: 400px; }
+    /* line 16, src/sass/components/layout/_circletext.scss */
+    .text-circular--large .heading-primary {
+      font-size: 22px; }
+  /* line 20, src/sass/components/layout/_circletext.scss */
+  .text-circular--medium {
+    width: 160px;
+    height: 160px;
+    margin: 160px; }
+  /* line 25, src/sass/components/layout/_circletext.scss */
+  .text-circular--small {
+    width: 100px;
+    height: 100px;
+    margin: 100px; }
