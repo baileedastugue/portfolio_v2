@@ -2,7 +2,7 @@ import React from 'react';
 
 const CircleText = (props) => {
      const hrefId = '#' + props.circleId;
-     const circleClass = 'text-circular--' + props.size;
+     const circleClass = 'circular-' + props.placement + '--' + props.size;
      const textPlacement = (placement) => {
           let position;
           if (placement === 'top') {
@@ -16,7 +16,7 @@ const CircleText = (props) => {
      };
 
      return (
-          <div className='text-circular'>
+          <div className='circular'>
                <svg className={circleClass} viewBox='0 0 100 100'>
                     <path
                          id={props.circleId}
