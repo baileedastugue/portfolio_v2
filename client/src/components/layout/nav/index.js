@@ -1,21 +1,46 @@
 import React from 'react';
 import Logo from '../Logo';
-import MenuButton from '../../Buttons/MenuButton';
-import Enable from '../../Buttons/Accessibility/Enable';
+import Menu from '@material-ui/icons/Menu';
+import EnableAccessibility from '../../Buttons/Accessibility/EnableAccessibility';
+import { AppBar, Button, Grid, Toolbar } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles(() => ({
+     gridItemCenter: {
+          display: 'flex',
+          justifyContent: 'center',
+     },
+     gridItemEnd: {
+          display: 'flex',
+          justifyContent: 'flex-end',
+     },
+}));
 
 const Nav = () => {
+     const classes = useStyles();
      return (
-          <div>
-               <nav className='navbar sticky-top navbar-light'>
-                    <div className='container-fluid'>
-                         <Enable />
-                         <a className='navbar-brand' href='/'>
+          <AppBar position='static' color='transparent'>
+               <Toolbar>
+                    <Grid
+                         container
+                         alignItems='center'
+                         direction='row'
+                         className={classes.item}
+                    >
+                         <Grid item xs={4}>
+                              <EnableAccessibility />
+                         </Grid>
+                         <Grid item xs={4} className={classes.gridItemCenter}>
                               <Logo size='small' />
-                         </a>
-                         <MenuButton />
-                    </div>
-               </nav>
-          </div>
+                         </Grid>
+                         <Grid item xs={4} className={classes.gridItemEnd}>
+                              <Button>
+                                   <Menu />
+                              </Button>
+                         </Grid>
+                    </Grid>
+               </Toolbar>
+          </AppBar>
      );
 };
 
