@@ -1,53 +1,71 @@
-import React, { Fragment } from 'react';
+import React, { useState, useCallback } from 'react';
+import Container from '@material-ui/core/Container';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
+import CarouselButtons from '../CarouselButtons';
+import CarouselSlider from '../CarouselSlider';
+import { useMediaQuery } from '@material-ui/core';
 
-const CarouselContainer = (props) => {
-     const carouselTarget = '#' + props.carouselId;
+const useStyles = makeStyles({
+  root: (props) => ({
+    display: 'flex',
+    width: props.width,
+    overflowX: 'clip',
+    position: 'relative',
+    padding: 0,
+  }),
+});
 
-     return (
-          <Fragment>
-               <div
-                    id='carouselExampleControls'
-                    class='carousel slide'
-                    data-bs-ride='carousel'
-               >
-                    <div class='carousel-inner'>
-                         <div class='carousel-item active'>
-                              <img src='...' class='d-block w-100' alt='...' />
-                         </div>
-                         <div class='carousel-item'>
-                              <img src='...' class='d-block w-100' alt='...' />
-                         </div>
-                         <div class='carousel-item'>
-                              <img src='...' class='d-block w-100' alt='...' />
-                         </div>
-                    </div>
-                    <button
-                         class='carousel-control-prev'
-                         type='button'
-                         data-bs-target='#carouselExampleControls'
-                         data-bs-slide='prev'
-                    >
-                         <span
-                              class='carousel-control-prev-icon'
-                              aria-hidden='true'
-                         ></span>
-                         <span class='visually-hidden'>Previous</span>
-                    </button>
-                    <button
-                         class='carousel-control-next'
-                         type='button'
-                         data-bs-target='#carouselExampleControls'
-                         data-bs-slide='next'
-                    >
-                         <span
-                              class='carousel-control-next-icon'
-                              aria-hidden='true'
-                         ></span>
-                         <span class='visually-hidden'>Next</span>
-                    </button>
-               </div>
-          </Fragment>
-     );
+const CarouselContainer = ({ slides, carouselName }) => {
+  const [slideWidth, setSlideWidth] = useState(0);
+  const [xPosition, setXPosition] = useState(0);
+  const [index, setIndex] = useState(0);
+
+  const nextCard = useCallback(() => {
+    setXPosition(xPosition - slideWidth);
+    setIndex(index + 1);
+    //eslint-disable-next-line
+  }, [xPosition, slideWidth]);
+
+  const prevCard = useCallback(() => {
+    setXPosition(xPosition + slideWidth);
+    setIndex(index - 1);
+    //eslint-disable-next-line
+  }, [xPosition, slideWidth]);
+
+  let slidesShowing = 1;
+
+  const theme = useTheme();
+  if (useMediaQuery(theme.breakpoints.up(425))) {
+    slidesShowing = 2;
+  }
+  if (useMediaQuery(theme.breakpoints.up('sm'))) {
+    slidesShowing = 3;
+  }
+
+  const props = { width: slideWidth * (slidesShowing + 0.5) + 'px' };
+  const classes = useStyles(props);
+
+  return (
+    <Container fluid>
+      <CarouselButtons
+        prevCard={prevCard}
+        nextCard={nextCard}
+        index={index}
+        slides={slides}
+        slidesShowing={slidesShowing}
+        carouselName={carouselName}
+      />
+      <Container className={classes.root}>
+        <CarouselSlider
+          items={slides}
+          prevCard={prevCard}
+          nextCard={nextCard}
+          setSlideWidth={setSlideWidth}
+          xPosition={xPosition}
+        />
+      </Container>
+    </Container>
+  );
 };
 
 export default CarouselContainer;

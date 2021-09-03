@@ -1,12 +1,13 @@
 import React from 'react';
-import CarouselContainer from '../../Carousel/CarouselContainer';
-import Card from '../../Carousel/Card';
+import { Splide, SplideSlide } from '@splidejs/react-splide';
 
 const About = () => {
      return (
-          <CarouselContainer carouselId='new'>
-               <Card className='active'>Hello</Card>
-          </CarouselContainer>
+          <Splide>
+               <SplideSlide>Slide 1</SplideSlide>
+               <SplideSlide>Slider 2</SplideSlide>
+               <SplideSlide>Slide 3</SplideSlide>
+          </Splide>
      );
 };
 
