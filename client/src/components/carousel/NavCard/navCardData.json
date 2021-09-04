@@ -1,0 +1,27 @@
+[
+  {
+    "id": 0,
+    "name": "About",
+    "detail": "About Bailee"
+  },
+  {
+    "id": 1,
+    "name": "Projects",
+    "detail": "Recent Projects"
+  },
+  {
+    "id": 2,
+    "name": "Resume",
+    "detail": "Resume and transcripts"
+  },
+  {
+    "id": 3,
+    "name": "Tech",
+    "detail": "Favorite development technology"
+  },
+  {
+    "id": 4,
+    "name": "Contact",
+    "detail": "Find contact information for GitHub, LinkedIn, and email"
+  }
+]

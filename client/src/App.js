@@ -1,35 +1,24 @@
 import './sass/main.scss';
-import CircleText from './components/Layout/CircleText';
+import Nav from './components/Layout/Nav';
+import { Provider } from 'react-redux';
+import store from './store';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import NavCard from './components/Carousel/NavCard';
+import CarouselContainer from './components/Carousel/CarouselContainer';
+import navCardData from './components/Carousel/NavCard/navCardData.json';
 
-function App() {
-     return (
-          <div>
-               <CircleText
-                    circleId='bailee'
-                    placement='top'
-                    fontStyle='heading-primary'
-                    size='large'
-               >
-                    &nbsp;Bailee Dastugue
-               </CircleText>
-               <CircleText
-                    circleId='development'
-                    placement='bottom'
-                    fontStyle='heading-primary'
-                    size='large'
-               >
-                    &nbsp;Development
-               </CircleText>
-               <CircleText
-                    circleId='full'
-                    placement='full'
-                    fontStyle='heading-primary'
-                    size='small'
-               >
-                    &nbsp;GitHub
-               </CircleText>
-          </div>
-     );
-}
+const App = (props) => {
+  // console.log(navCardData);s
+  return (
+    <Provider store={store}>
+      <CssBaseline>
+        {/* <Nav /> */}
+        <CarouselContainer slides={navCardData} carouselName='Learn more'>
+          <NavCard {...props} />
+        </CarouselContainer>
+      </CssBaseline>
+    </Provider>
+  );
+};
 
 export default App;
