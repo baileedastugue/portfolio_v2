@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, Fragment } from 'react';
 import Container from '@material-ui/core/Container';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import CarouselButtons from '../CarouselButtons';
@@ -14,6 +14,7 @@ const useStyles = makeStyles({
     overflowX: 'clip',
     position: 'relative',
     padding: 0,
+    marginBottom: '10%',
   }),
   alignTextEnd: {
     textAlign: 'end',
@@ -46,12 +47,11 @@ const CarouselContainer = (props) => {
   if (useMediaQuery(theme.breakpoints.up('sm'))) {
     slidesShowing = 3;
   }
-  console.log(slideWidth);
 
   const classes = useStyles(styleProps);
 
   return (
-    <Container fluid>
+    <Fragment>
       <Grid container alignItems='center'>
         <Grid item xs={6}>
           <CarouselTitle>{carouselName}</CarouselTitle>
@@ -77,7 +77,7 @@ const CarouselContainer = (props) => {
           {props.children}
         </CarouselSlider>
       </Container>
-    </Container>
+    </Fragment>
   );
 };
 

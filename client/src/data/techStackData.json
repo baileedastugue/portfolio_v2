@@ -1,0 +1,49 @@
+[
+  {
+    "id": 0,
+    "tech": "JavaScript",
+    "details": "ah yes, some details about my knowledge"
+  },
+  {
+    "id": 1,
+    "tech": "React",
+    "details": "ah yes, some details about my knowledge"
+  },
+  {
+    "id": 2,
+    "tech": "CSS and Sass",
+    "details": "ah yes, some details about my knowledge"
+  },
+  {
+    "id": 3,
+    "tech": "HTML5",
+    "details": "ah yes, some details about my knowledge"
+  },
+  {
+    "id": 4,
+    "tech": "NodeJS",
+    "details": "ah yes, some details about my knowledge"
+  },
+  {
+    "id": 5,
+    "tech": "Redux",
+    "details": "ah yes, some details about my knowledge"
+  },
+  {
+    "id": 6,
+    "tech": "MongoDB",
+    "details": "ah yes, some details about my knowledge"
+  },
+  {
+    "id": 7,
+    "tech": "Express",
+    "details": "ah yes, some details about my knowledge"
+  },
+  {
+    "id": 8,
+    "tech": "Express",
+    "icon": "",
+    "details": "ah yes, some details about my knowledge"
+  }
+
+]
