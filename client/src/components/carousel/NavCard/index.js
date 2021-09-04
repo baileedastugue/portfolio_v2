@@ -19,7 +19,6 @@ const useStyles = makeStyles({
 });
 
 const NavCard = ({ slide }) => {
-  console.log(slide);
   const classes = useStyles();
 
   return (
