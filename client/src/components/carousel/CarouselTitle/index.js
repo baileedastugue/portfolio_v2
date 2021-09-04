@@ -1,5 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/styles';
+import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles({
   root: {
@@ -10,7 +11,11 @@ const useStyles = makeStyles({
 
 const CarouselTitle = (props) => {
   const classes = useStyles();
-  return <h2 className={classes.root}>{props.children}</h2>;
+  return (
+    <Typography vairant='h2' className={classes.root}>
+      {props.children}
+    </Typography>
+  );
 };
 
 export default CarouselTitle;

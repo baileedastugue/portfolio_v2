@@ -2,26 +2,26 @@
   {
     "id": 0,
     "name": "About",
-    "msg": "About Bailee"
+    "detail": "About Bailee"
   },
   {
     "id": 1,
     "name": "Projects",
-    "msg": "Recent Projects"
+    "detail": "Recent Projects"
   },
   {
     "id": 2,
     "name": "Resume",
-    "msg": "Resume and transcripts"
+    "detail": "Resume and transcripts"
   },
   {
     "id": 3,
-    "name": "Tech stack",
-    "msg": "Favorite development technology"
+    "name": "Tech",
+    "detail": "Favorite development technology"
   },
   {
     "id": 4,
     "name": "Contact",
-    "msg": "Find contact information for GitHub, LinkedIn, and email"
+    "detail": "Find contact information for GitHub, LinkedIn, and email"
   }
 ]

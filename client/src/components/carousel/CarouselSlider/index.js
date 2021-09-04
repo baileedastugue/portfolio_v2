@@ -1,26 +1,27 @@
-import React, { useRef, useEffect, Fragment } from 'react';
+import React, { useRef, useEffect } from 'react';
 import Card from '@material-ui/core/Card';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
-import NavCard from '../NavCard';
 
 const useStyles = makeStyles((theme) => ({
   cardDisplayed: {
-    display: 'block',
-    margin: '10px 20px 10px 0',
-    padding: '5px',
-    minWidth: '150px',
-    height: '200px',
+    margin: '10px 10px 10px 0',
+    width: '200px',
+    flexDirection: 'column',
+    height: '100%',
+    display: 'flex',
+    padding: 0,
     transition: 'transform 0.6s ease-in-out',
+    justifyContent: 'center',
+    borderRadius: 0,
     [theme.breakpoints.up(425)]: {
-      backgroundColor: 'blue',
-      // width: '200px',
+      width: '200px',
+      margin: '10px 25px 20px 0',
     },
     [theme.breakpoints.up('sm')]: {
       backgroundColor: 'red',
     },
   },
-  // needed
   carouselContainer: {
     display: 'flex',
   },
@@ -50,7 +51,6 @@ const CarouselSlider = (props) => {
               style={{
                 transform: `translateX(${xPosition}px)`,
               }}
-              xs={6}
             >
               {React.cloneElement(props.children, { slide: slide })}
             </Card>

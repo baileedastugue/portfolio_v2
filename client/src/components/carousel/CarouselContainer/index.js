@@ -10,7 +10,7 @@ import Grid from '@material-ui/core/Grid';
 const useStyles = makeStyles({
   root: (styleProps) => ({
     display: 'flex',
-    // width: props.width,
+    width: styleProps.width,
     overflowX: 'clip',
     position: 'relative',
     padding: 0,
@@ -39,14 +39,15 @@ const CarouselContainer = (props) => {
 
   const theme = useTheme();
   let slidesShowing = 1;
-  if (useMediaQuery(theme.breakpoints.up(425))) {
-    slidesShowing = 2;
+  let styleProps = { width: slideWidth * (slidesShowing + 0.25) + 'px' };
+  if (useMediaQuery(theme.breakpoints.up(375))) {
+    styleProps = { width: slideWidth * (slidesShowing + 0.5) + 'px' };
   }
   if (useMediaQuery(theme.breakpoints.up('sm'))) {
     slidesShowing = 3;
   }
+  console.log(slideWidth);
 
-  const styleProps = { width: slideWidth * (slidesShowing + 0.5) + 'px' };
   const classes = useStyles(styleProps);
 
   return (
