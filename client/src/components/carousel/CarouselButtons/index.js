@@ -1,6 +1,15 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
+import ArrowForwardIosSharpIcon from '@material-ui/icons/ArrowForwardIosSharp';
+import ArrowBackIosSharpIcon from '@material-ui/icons/ArrowBackIosSharp';
 import { Fragment } from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles({
+  root: {
+    minWidth: 'unset',
+  },
+});
 
 const CarouselButtons = ({
   index,
@@ -8,19 +17,24 @@ const CarouselButtons = ({
   prevCard,
   slides,
   slidesShowing,
-  carouselName,
 }) => {
+  const classes = useStyles();
+
   return (
     <Fragment>
-      <h2>{carouselName}</h2>
-      <Button onClick={prevCard} disabled={index === 0}>
-        Previous
+      <Button
+        className={classes.root}
+        onClick={prevCard}
+        disabled={index === 0}
+      >
+        <ArrowBackIosSharpIcon />
       </Button>
       <Button
+        className={classes.root}
         onClick={nextCard}
         disabled={index === slides.length - slidesShowing}
       >
-        Next
+        <ArrowForwardIosSharpIcon />
       </Button>
     </Fragment>
   );

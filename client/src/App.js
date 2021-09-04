@@ -3,23 +3,20 @@ import Nav from './components/Layout/Nav';
 import { Provider } from 'react-redux';
 import store from './store';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import CarouselSlider from './components/Carousel/CarouselContainer';
+import NavCard from './components/Carousel/NavCard';
+import CarouselContainer from './components/Carousel/CarouselContainer';
+import navCardData from './components/Carousel/NavCard/navCardData.json';
 
-const App = () => {
-  const slides = [
-    { id: 0, name: 'Slide 0', msg: 'I love baby' },
-    { id: 1, name: 'Slide 1', msg: 'I love jack' },
-    { id: 2, name: 'Slide 2', msg: 'jack is my perfect husband' },
-    { id: 3, name: 'Slide 3', msg: 'my loml' },
-    { id: 4, name: 'Slide 4', msg: 'I love Mr. Baby' },
-    { id: 5, name: 'Slide 5', msg: 'Mr. and Mrs. Baby' },
-  ];
+const App = (props) => {
+  // console.log(navCardData);s
   return (
     <Provider store={store}>
       <CssBaseline>
-        <Nav />
+        {/* <Nav /> */}
+        <CarouselContainer slides={navCardData} carouselName='Learn more'>
+          <NavCard {...props} />
+        </CarouselContainer>
       </CssBaseline>
-      <CarouselSlider slides={slides} carouselName='First Carousel' />
     </Provider>
   );
 };

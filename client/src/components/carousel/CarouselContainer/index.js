@@ -4,37 +4,41 @@ import { makeStyles, useTheme } from '@material-ui/core/styles';
 import CarouselButtons from '../CarouselButtons';
 import CarouselSlider from '../CarouselSlider';
 import { useMediaQuery } from '@material-ui/core';
+import CarouselTitle from '../CarouselTitle';
+import Grid from '@material-ui/core/Grid';
 
 const useStyles = makeStyles({
-  root: (props) => ({
+  root: (styleProps) => ({
     display: 'flex',
-    width: props.width,
+    // width: props.width,
     overflowX: 'clip',
     position: 'relative',
     padding: 0,
   }),
+  alignTextEnd: {
+    textAlign: 'end',
+  },
 });
 
-const CarouselContainer = ({ slides, carouselName }) => {
+const CarouselContainer = (props) => {
   const [slideWidth, setSlideWidth] = useState(0);
   const [xPosition, setXPosition] = useState(0);
   const [index, setIndex] = useState(0);
 
+  const { slides, carouselName } = props;
+
   const nextCard = useCallback(() => {
     setXPosition(xPosition - slideWidth);
     setIndex(index + 1);
-    //eslint-disable-next-line
-  }, [xPosition, slideWidth]);
+  }, [xPosition, slideWidth, index]);
 
   const prevCard = useCallback(() => {
     setXPosition(xPosition + slideWidth);
     setIndex(index - 1);
-    //eslint-disable-next-line
-  }, [xPosition, slideWidth]);
-
-  let slidesShowing = 1;
+  }, [xPosition, slideWidth, index]);
 
   const theme = useTheme();
+  let slidesShowing = 1;
   if (useMediaQuery(theme.breakpoints.up(425))) {
     slidesShowing = 2;
   }
@@ -42,27 +46,35 @@ const CarouselContainer = ({ slides, carouselName }) => {
     slidesShowing = 3;
   }
 
-  const props = { width: slideWidth * (slidesShowing + 0.5) + 'px' };
-  const classes = useStyles(props);
+  const styleProps = { width: slideWidth * (slidesShowing + 0.5) + 'px' };
+  const classes = useStyles(styleProps);
 
   return (
     <Container fluid>
-      <CarouselButtons
-        prevCard={prevCard}
-        nextCard={nextCard}
-        index={index}
-        slides={slides}
-        slidesShowing={slidesShowing}
-        carouselName={carouselName}
-      />
-      <Container className={classes.root}>
+      <Grid container alignItems='center'>
+        <Grid item xs={6}>
+          <CarouselTitle>{carouselName}</CarouselTitle>
+        </Grid>
+        <Grid item xs={6} className={classes.alignTextEnd}>
+          <CarouselButtons
+            prevCard={prevCard}
+            nextCard={nextCard}
+            index={index}
+            slides={slides}
+            slidesShowing={slidesShowing}
+          />
+        </Grid>
+      </Grid>
+      <Container fluid className={classes.root}>
         <CarouselSlider
-          items={slides}
+          slides={slides}
           prevCard={prevCard}
           nextCard={nextCard}
           setSlideWidth={setSlideWidth}
           xPosition={xPosition}
-        />
+        >
+          {props.children}
+        </CarouselSlider>
       </Container>
     </Container>
   );
