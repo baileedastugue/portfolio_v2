@@ -1,11 +1,15 @@
 import React from 'react';
 import Logo from '../Logo';
-import Menu from '@material-ui/icons/Menu';
-import EnableAccessibility from '../../Buttons/Accessibility/EnableAccessibility';
+// import Menu from '@material-ui/icons/Menu';
+// import EnableAccessibility from '../../Buttons/Accessibility/EnableAccessibility';
 import { AppBar, Button, Grid, Toolbar } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles(() => ({
+  root: {
+    margin: '0 0 10%',
+    backgroundColor: 'rgba(255, 255, 255, .97)',
+  },
   gridItemCenter: {
     display: 'flex',
     justifyContent: 'center',
@@ -19,7 +23,7 @@ const useStyles = makeStyles(() => ({
 const Nav = () => {
   const classes = useStyles();
   return (
-    <AppBar position='static' color='transparent'>
+    <AppBar position='sticky' className={classes.root}>
       <Toolbar>
         <Grid
           container
@@ -27,22 +31,22 @@ const Nav = () => {
           direction='row'
           className={classes.item}
         >
-          <Grid item xs={4}>
+          {/* <Grid item xs={4}>
             <EnableAccessibility />
-          </Grid>
+          </Grid> */}
           <Grid
             item
-            xs={4}
+            xs={12}
             className={classes.gridItemCenter}
-            style={{ margin: '4% 0 0 ' }}
+            style={{ margin: '15px 0 0 ' }}
           >
             <Logo size='small' />
           </Grid>
-          <Grid item xs={4} className={classes.gridItemEnd}>
+          {/* <Grid item xs={4} className={classes.gridItemEnd}>
             <Button>
               <Menu />
             </Button>
-          </Grid>
+          </Grid> */}
         </Grid>
       </Toolbar>
     </AppBar>

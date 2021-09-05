@@ -1,14 +1,22 @@
 import React from 'react';
-import { Typography, Box } from '@material-ui/core';
+import { Typography, Box, Grid } from '@material-ui/core';
 import GitHubButton from '../../Buttons/Contact/GitHubButton';
 import LinkedInButton from '../../Buttons/Contact/LinkedInButton';
+import EmailButton from '../../Buttons/Contact/EmailButton';
 
 const Contact = (props) => {
   return (
-    <Box id={props.id}>
+    <Box id={props.id} style={{ paddingTop: '120px', marginTop: '-120px' }}>
       <Typography variant='h2'>Contact</Typography>
       <GitHubButton />
-      <LinkedInButton />
+      <Grid container justifyContent='center'>
+        <Grid xs={6}>
+          <LinkedInButton />
+        </Grid>
+        <Grid xs={6}>
+          <EmailButton />
+        </Grid>
+      </Grid>
     </Box>
   );
 };

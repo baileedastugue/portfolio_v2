@@ -67,11 +67,11 @@
   }
   &.linkedIn {
     letter-spacing: 5px;
-    svg {
-      stroke: none;
-    }
   }
-  &.connect {
+  &.email {
+    letter-spacing: 1px;
+  }
+  &.connect, &.linkedIn, &.sendEmail, &.email {
     svg{
       stroke: none;
     }
