@@ -30,7 +30,12 @@ const Nav = () => {
           <Grid item xs={4}>
             <EnableAccessibility />
           </Grid>
-          <Grid item xs={4} className={classes.gridItemCenter}>
+          <Grid
+            item
+            xs={4}
+            className={classes.gridItemCenter}
+            style={{ margin: '4% 0 0 ' }}
+          >
             <Logo size='small' />
           </Grid>
           <Grid item xs={4} className={classes.gridItemEnd}>

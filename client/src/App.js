@@ -9,6 +9,10 @@ import navCardData from './data/navCardData.json';
 import Welcome from './components/Sections/Welcome';
 import TechStack from './components/Sections/TechStack';
 import { Container } from '@material-ui/core';
+import About from './components/Sections/About';
+import Resume from './components/Sections/Resume';
+import Projects from './components/Sections/Projects';
+import Contact from './components/Sections/Contact';
 
 const App = (props) => {
   return (
@@ -20,7 +24,11 @@ const App = (props) => {
           <CarouselContainer slides={navCardData} carouselName='Learn more'>
             <NavCard {...props} />
           </CarouselContainer>
+          <About />
           <TechStack />
+          <Projects />
+          <Resume />
+          <Contact />
         </Container>
       </CssBaseline>
     </Provider>
