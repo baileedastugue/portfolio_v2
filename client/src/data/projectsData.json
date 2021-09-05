@@ -1,0 +1,28 @@
+[
+  {
+    "id": 0,
+    "name": "Elephant's Memory",
+    "url": "",
+    "detail": "A collaborative, private and digital memory album. This application allows users to create memory albums that others with the link can also contribute to. Memory posts include uploading a picture with a caption or a text prompt and response. Users can protect their albums and the posts within those albums with an encrypted password. Additional functionality includes changing user passwords, deleting user account, deleting albums, changing album names, adding, updating, or removing album passwords, and deleting memory posts. Both user and album passwords are encrypted though BCrypt.",
+    "techUsed": ["React", "Redux", "Sass", "NodeJS", "MongoDB", "Express", "CSS Animations", "React Spring", "Reactstrap", "BCrypt", "Cloudinary API"],
+    "liveSite": "https://elephantsmemory.herokuapp.com/",
+    "repo": "https://github.com/baileedastugue/elephants-memory"
+  },
+  {
+    "id": 1,
+    "name": "Image Uploader Abstraction",
+    "url": "",
+    "detail": "",
+    "techUsed": ["React", "Redux", "Sass", "NodeJS", "MongoDB", "Express", "Reactstrap", "BCrypt", "Cloudinary API"],
+    "repo": ""
+  },
+  {
+    "id": 2,
+    "name": "Category Header Creator",
+    "url": "",
+    "detail": "",
+    "techUsed": ["React", "Sass", "Reactstrap"],
+    "liveSite": "",
+    "repo": ""
+  }
+]

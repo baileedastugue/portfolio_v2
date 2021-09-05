@@ -30,6 +30,18 @@
       margin: calc(#{$text-circle-small} / -2) 0 calc(#{$text-circle-small} / -1.8);
     }
   }
+
+  &-full {
+    &--large {
+      margin: calc(#{$text-circle-large} * .75 ) auto calc(#{$text-circle-large} / -4);
+    }
+    &--medium {
+      margin: calc(#{$text-circle-medium} / -2) 0;
+    }
+    &--small {
+      margin: calc(#{$text-circle-small} / -2) 0 calc(#{$text-circle-small} / -1.8);
+    }
+  }
   
   [class$='--large'] {
     width: $text-circle-large;
@@ -51,6 +63,17 @@
     height: $text-circle-small;
     .heading-primary {
       font-size: 1.4rem;
+    }
+  }
+  &.linkedIn {
+    letter-spacing: 5px;
+    svg {
+      stroke: none;
+    }
+  }
+  &.connect {
+    svg{
+      stroke: none;
     }
   }
 }

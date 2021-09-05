@@ -38,12 +38,6 @@
     "id": 7,
     "tech": "Express",
     "details": "ah yes, some details about my knowledge"
-  },
-  {
-    "id": 8,
-    "tech": "Express",
-    "icon": "",
-    "details": "ah yes, some details about my knowledge"
   }
 
 ]
