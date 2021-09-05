@@ -1,17 +1,17 @@
-import React, { Fragment } from 'react';
-import { Typography } from '@material-ui/core';
+import React from 'react';
+import { Box, Typography } from '@material-ui/core';
 import CarouselContainer from '../../Carousel/CarouselContainer';
 import projectsData from '../../../data/projectsData.json';
 import ProjectCard from '../../Carousel/ProjectCard';
 
-const Projects = () => {
+const Projects = (props) => {
   return (
-    <Fragment>
+    <Box id={props.id}>
       <Typography variant='h2'>Projects</Typography>
       <CarouselContainer slides={projectsData}>
         <ProjectCard />
       </CarouselContainer>
-    </Fragment>
+    </Box>
   );
 };
 

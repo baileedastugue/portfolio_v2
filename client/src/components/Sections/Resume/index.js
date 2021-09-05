@@ -1,11 +1,11 @@
-import React, { Fragment } from 'react';
-import { Typography } from '@material-ui/core';
+import React from 'react';
+import { Box, Typography } from '@material-ui/core';
 
-const Resume = () => {
+const Resume = (props) => {
   return (
-    <Fragment>
+    <Box id={props.id}>
       <Typography variant='h2'>Resume</Typography>
-    </Fragment>
+    </Box>
   );
 };
 

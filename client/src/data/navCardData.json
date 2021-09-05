@@ -1,26 +1,31 @@
 [
   {
     "id": 0,
+    "navId": "about",
     "name": "About",
     "detail": "About Bailee"
   },
   {
     "id": 1,
+    "navId": "projects",
     "name": "Projects",
     "detail": "Recent Projects"
   },
   {
     "id": 2,
+    "navId": "techStack",
     "name": "Tech",
     "detail": "Favorite development technology"
   },
   {
     "id": 3,
+    "navId": "resume",
     "name": "Resume",
     "detail": "Resume and transcripts"
   },
   {
     "id": 4,
+    "navId": "contact",
     "name": "Contact",
     "detail": "Find contact information for GitHub, LinkedIn, and email"
   }

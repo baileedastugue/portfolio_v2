@@ -1,9 +1,9 @@
-import React, { Fragment } from 'react';
-import { Typography } from '@material-ui/core';
+import React from 'react';
+import { Typography, Box } from '@material-ui/core';
 
-const About = () => {
+const About = (props) => {
   return (
-    <Fragment>
+    <Box id={props.id}>
       <Typography variant='h2'>About Bailee,</Typography>
       <Typography paragraph>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis
@@ -25,7 +25,7 @@ const About = () => {
         justo elit, fringilla eget metus at, convallis ultrices felis. Maecenas
         sed nisi sit amet mauris porta luctus.
       </Typography>
-    </Fragment>
+    </Box>
   );
 };
 

@@ -1,17 +1,17 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import techStackData from '../../../data/techStackData.json';
-import { List, ListItem, Typography } from '@material-ui/core/';
+import { Box, List, ListItem, Typography } from '@material-ui/core/';
 
-const TechStack = () => {
+const TechStack = (props) => {
   return (
-    <Fragment>
+    <Box id={props.id}>
       <Typography variant='h2'>My Tech Stack</Typography>
       <List>
         {techStackData.map((tech, i) => (
           <ListItem>{tech.tech}</ListItem>
         ))}
       </List>
-    </Fragment>
+    </Box>
   );
 };
 
