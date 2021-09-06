@@ -47,7 +47,7 @@ const EmailButton = () => {
           size='small'
           specificClass='email'
         >
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;an email
+          &nbsp;&nbsp;&nbsp;an email
         </CircleText>
         <MailOutlineSharpIcon fontStyle='large' className={classes.icon} />
       </Box>

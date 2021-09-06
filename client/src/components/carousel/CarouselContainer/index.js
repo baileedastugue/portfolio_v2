@@ -45,7 +45,8 @@ const CarouselContainer = (props) => {
     styleProps = { width: slideWidth * (slidesShowing + 0.5) + 'px' };
   }
   if (useMediaQuery(theme.breakpoints.up('sm'))) {
-    slidesShowing = 3;
+    slidesShowing = 2;
+    styleProps = { width: slideWidth * (slidesShowing + 0.5) + 'px' };
   }
 
   const classes = useStyles(styleProps);

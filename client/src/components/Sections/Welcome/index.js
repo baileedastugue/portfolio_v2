@@ -1,16 +1,30 @@
 import React, { useState, useCallback, useRef, useEffect } from 'react';
 import { useTransition, animated } from '@react-spring/web';
-import { makeStyles } from '@material-ui/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import { InView } from 'react-intersection-observer';
 import { Box, Typography } from '@material-ui/core';
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   root: {
-    fontSize: '30px',
+    height: '300px',
+    marginBottom: '15%',
   },
   animation: {
     fontSize: '30px',
-    margin: '10px',
+    // height: '40px',
+    margin: '0 0 12px',
+    lineHeight: 1,
+    [theme.breakpoints.up(425)]: {
+      fontSize: '30px',
+    },
+    [theme.breakpoints.up(768)]: {
+      fontSize: '40px',
+      margin: '0 0 15px',
+    },
+    [theme.breakpoints.up(1024)]: {
+      fontSize: '60px',
+      margin: '0 0 25px',
+    },
   },
 }));
 
@@ -24,16 +38,14 @@ const Welcome = (props) => {
     from: {
       opacity: 0,
       y: 20,
-      height: 0,
-      innerHeight: 0,
     },
+    // delay: inView ? 0 : 10000000,
+    pause: inView,
     config: { mass: 1, tension: 120, friction: 14 },
     enter: [
       {
-        opacity: inView ? 1 : 0,
-        height: 40,
-        innerHeight: 40,
-        y: inView ? 0 : 20,
+        opacity: 1,
+        y: 20,
         color: '#808080',
       },
     ],
@@ -76,26 +88,25 @@ const Welcome = (props) => {
   }, []);
 
   useEffect(() => {
-    animateText();
-  }, [animateText]);
+    if (inView) {
+      animateText();
+    }
+  }, [animateText, inView]);
 
   return (
     <InView onChange={setInView}>
       {({ ref, inView }) => (
-        <Box ref={ref} id={props.id} style={{ height: '260px' }}>
+        <Box ref={ref} id={props.id} className={classes.root}>
           <Typography
             variant='h3'
             component='div'
-            className={classes.root}
+            className={classes.animation}
             gutterBottom
           >
             Hi, I'm
           </Typography>
           {transitions(({ ...rest }, animatedItem, key) => (
-            <animated.div
-              // style={rest}
-              style={rest}
-            >
+            <animated.div style={rest}>
               <Typography
                 variant='h3'
                 component='p'
@@ -103,7 +114,6 @@ const Welcome = (props) => {
                 key={key.key}
                 style={{ color: key.key === 'Bailee Dastugue' && 'black' }}
               >
-                {console.log(key)}
                 {animatedItem}
               </Typography>
             </animated.div>

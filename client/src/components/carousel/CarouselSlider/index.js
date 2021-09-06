@@ -18,9 +18,9 @@ const useStyles = makeStyles((theme) => ({
       width: '200px',
       margin: '10px 25px 20px 0',
     },
-    [theme.breakpoints.up('sm')]: {
-      backgroundColor: 'red',
-    },
+    // [theme.breakpoints.up('sm')]: {
+    //   width: '20px',
+    // },
   },
   carouselContainer: {
     display: 'flex',
