@@ -31,6 +31,7 @@ const useStyles = makeStyles((theme) => ({
 const Welcome = (props) => {
   const classes = useStyles();
   const [inView, setInView] = useState(false);
+  const [animationComplete, setAnimationComplete] = useState(false);
 
   const [animatedItems, set] = useState([]);
   const listRef = useRef([]);
@@ -50,6 +51,7 @@ const Welcome = (props) => {
       },
     ],
     update: { color: '#808080' },
+    onRest: () => setAnimationComplete(true),
   });
 
   const animateText = useCallback(() => {
@@ -88,7 +90,7 @@ const Welcome = (props) => {
   }, []);
 
   useEffect(() => {
-    if (inView) {
+    if (inView && !animationComplete) {
       animateText();
     }
   }, [animateText, inView]);
