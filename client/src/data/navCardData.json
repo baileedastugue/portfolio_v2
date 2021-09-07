@@ -3,30 +3,35 @@
     "id": 0,
     "navId": "about",
     "name": "About",
-    "detail": "About Bailee"
+    "detail": "About Bailee",
+    "backgroundUrl": "https://res.cloudinary.com/dp9ndx3oj/image/upload/v1630980204/bdastugue/coffees.jpg"
   },
   {
     "id": 1,
-    "navId": "projects",
-    "name": "Projects",
-    "detail": "Recent Projects"
+    "navId": "techStack",
+    "name": "Tech",
+    "detail": "Favorite development technology",
+    "backgroundUrl": "https://res.cloudinary.com/dp9ndx3oj/image/upload/v1630980234/bdastugue/icecreams.jpg"
   },
   {
     "id": 2,
-    "navId": "techStack",
-    "name": "Tech",
-    "detail": "Favorite development technology"
+    "navId": "projects",
+    "name": "Projects",
+    "detail": "Recent Projects",
+    "backgroundUrl": "https://res.cloudinary.com/dp9ndx3oj/image/upload/v1630980219/bdastugue/tomatoes.jpg"
   },
   {
     "id": 3,
     "navId": "resume",
     "name": "Resume",
-    "detail": "Resume and transcripts"
+    "detail": "Resume and transcripts",
+    "backgroundUrl": "https://res.cloudinary.com/dp9ndx3oj/image/upload/v1630980236/bdastugue/peaches.jpg"
   },
   {
     "id": 4,
     "navId": "contact",
     "name": "Contact",
-    "detail": "Find contact information for GitHub, LinkedIn, and email"
+    "detail": "Find contact information for GitHub, LinkedIn, and email",
+    "background": "https://res.cloudinary.com/dp9ndx3oj/image/upload/v1630980267/bdastugue/donuts.jpg"
   }
 ]

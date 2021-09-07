@@ -40,13 +40,12 @@ const Welcome = (props) => {
       opacity: 0,
       y: 20,
     },
-    // delay: inView ? 0 : 10000000,
     pause: inView,
     config: { mass: 1, tension: 120, friction: 14 },
     enter: [
       {
         opacity: 1,
-        y: 20,
+        y: 0,
         color: '#808080',
       },
     ],

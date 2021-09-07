@@ -7,20 +7,17 @@ const useStyles = makeStyles((theme) => ({
   cardDisplayed: {
     margin: '10px 10px 10px 0',
     width: '200px',
-    flexDirection: 'column',
+    // flexDirection: 'column',
     height: '100%',
-    display: 'flex',
+    // display: 'flex',
     padding: 0,
     transition: 'transform 0.6s ease-in-out',
-    justifyContent: 'center',
+    // justifyContent: 'center',
     borderRadius: 0,
     [theme.breakpoints.up(425)]: {
       width: '200px',
       margin: '10px 25px 20px 0',
     },
-    // [theme.breakpoints.up('sm')]: {
-    //   width: '20px',
-    // },
   },
   carouselContainer: {
     display: 'flex',

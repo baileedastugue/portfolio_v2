@@ -3,10 +3,15 @@ import { CardContent, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
 import { Link } from 'react-scroll';
 
-const useStyles = makeStyles({
-  root: {
+const useStyles = makeStyles((theme) => ({
+  root: (styleProps) => ({
     alignItems: 'center',
-  },
+    backgroundImage: styleProps.backgroundImage,
+    backgroundRepeat: 'none',
+    backgroundSize: 'cover',
+    height: '100%',
+    width: '100%',
+  }),
   navTitle: {
     textTransform: 'uppercase',
     wordWrap: 'break-word',
@@ -17,10 +22,14 @@ const useStyles = makeStyles({
   navDetails: {
     opacity: 0,
   },
-});
+}));
 
 const NavCard = ({ slide }) => {
-  const classes = useStyles();
+  const { name, backgroundUrl } = slide;
+  const styleProps = {
+    backgroundImage: `url(${backgroundUrl})`,
+  };
+  const classes = useStyles(styleProps);
 
   return (
     <Link
@@ -36,7 +45,7 @@ const NavCard = ({ slide }) => {
           listStyleType='none'
           className={`card-nav--title ${classes.navTitle}`}
         >
-          {slide.name}
+          {name}
         </Typography>
       </CardContent>
     </Link>

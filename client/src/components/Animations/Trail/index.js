@@ -1,28 +1,28 @@
-// import React, { Children, Fragment, useRef } from 'react';
-// import { useTransition, animated as a } from 'react-spring';
+import React, { Children, Fragment, useState } from 'react';
+import { useTrail, animated } from 'react-spring';
 
-// const Trail = ({ inView, children }) => {
-//   const ref = useRef();
+const Trail = ({ inView, children }) => {
+  const [animationComplete, setAnimationComplete] = useState(false);
+  const childrenArray = Children.toArray(children);
+  const trail = useTrail(childrenArray.length, {
+    config: { mass: 1, tension: 120, friction: 14 },
+    opacity: inView || animationComplete ? 1 : 0,
+    x: inView || animationComplete ? 0 : 20,
+    height: inView || animationComplete ? 20 : 0,
+    delay: 500,
+    from: { opacity: 0, x: 20, height: 20 },
+    onRest: () => inView && setAnimationComplete(true),
+  });
 
-//   const childrenArray = Children.toArray(children);
-//   const trail = useTransition(childrenArray.length, {
-//     config: { mass: 5, tension: 2000, friction: 1000 },
-//     opacity: inView ? 1 : 0,
-//     y: inView ? 0 : 20,
-//     // height: inView ? '100%' : 0,
-//     delay: 1000,
-//     // duration: 1000,
-//     from: { opacity: 0, y: 20, height: 0 },
-//   });
-//   return (
-//     <Fragment>
-//       {trail.map(({ height, ...style }, index) => (
-//         <a.div key={index} style={style}>
-//           <a.div>{items[index]}</a.div>
-//         </a.div>
-//       ))}
-//     </Fragment>
-//   );
-// };
+  return (
+    <Fragment>
+      {trail.map(({ height, ...style }, index) => (
+        <animated.div key={index} style={style}>
+          <animated.div style={{ height }}>{childrenArray[index]}</animated.div>
+        </animated.div>
+      ))}
+    </Fragment>
+  );
+};
 
-// export default Trail;
+export default Trail;
