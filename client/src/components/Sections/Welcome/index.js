@@ -93,7 +93,7 @@ const Welcome = (props) => {
     if (inView && !animationComplete) {
       animateText();
     }
-  }, [animateText, inView]);
+  }, [animateText, inView, animationComplete]);
 
   return (
     <InView onChange={setInView}>

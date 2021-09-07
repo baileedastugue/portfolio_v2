@@ -18,6 +18,9 @@
     &--small {
       margin: calc(#{$text-circle-small} / 1.8) 0 calc(#{$text-circle-small} / -2);
     }
+    &--xsmall {
+      margin: calc(#{$text-circle-xsmall} / 1.8) 0 calc(#{$text-circle-xsmall} / -2);
+    }
   }
   &-bottom {
     &--large {
@@ -28,6 +31,9 @@
     }
     &--small {
       margin: calc(#{$text-circle-small} / -2) 0 calc(#{$text-circle-small} / -1.8);
+    }
+    &--xsmall {
+      margin: calc(#{$text-circle-xsmall} / -2) 0 calc(#{$text-circle-xsmall} / -1.8);
     }
   }
 
@@ -40,6 +46,9 @@
     }
     &--small {
       margin: calc(#{$text-circle-small} / -2) 0 calc(#{$text-circle-small} / -1.8);
+    }
+    &--xsmall {
+      margin: calc(#{$text-circle-xsmall} / -2) 0 calc(#{$text-circle-xsmall} / -1.8);
     }
   }
   
@@ -76,4 +85,25 @@
       stroke: none;
     }
   }
+
+  [class$='--xsmall'] {
+    width: $text-circle-xsmall;
+    height: $text-circle-xsmall;
+    .heading-primary {
+      font-size: 2rem;
+    }
+    
+  }
+  &.viewRepo, &.repo, &.viewLiveSite, &.liveSite {
+    svg{
+      stroke: none;
+    }
+  }
+
+  &.repo, &.liveSite {
+    letter-spacing: 3px;
+    margin: 0 auto;
+  }
 }
+
+

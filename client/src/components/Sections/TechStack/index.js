@@ -8,7 +8,7 @@ const TechStack = (props) => {
       <Typography variant='h2'>My Tech Stack</Typography>
       <List>
         {techStackData.map((tech, i) => (
-          <ListItem>{tech.tech}</ListItem>
+          <ListItem key={i}>{tech.tech}</ListItem>
         ))}
       </List>
     </Box>

@@ -67,7 +67,7 @@ const CarouselContainer = (props) => {
           />
         </Grid>
       </Grid>
-      <Container fluid className={classes.root}>
+      <Container fluid='true' className={classes.root}>
         <CarouselSlider
           slides={slides}
           prevCard={prevCard}

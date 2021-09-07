@@ -8,11 +8,11 @@ const useStyles = makeStyles({
     alignItems: 'center',
   },
   navTitle: {
-    listStyleType: 'none',
     textTransform: 'uppercase',
     wordWrap: 'break-word',
     fontSize: '4rem',
     letterSpacing: '.1rem',
+    listStyleType: 'none',
   },
   navDetails: {
     opacity: 0,
@@ -24,7 +24,7 @@ const NavCard = ({ slide }) => {
 
   return (
     <Link
-      activeClass={slide.id === 0 && 'active'}
+      className={slide.id === 0 ? 'active' : ''}
       to={slide.navId}
       smooth={true}
       spy={true}

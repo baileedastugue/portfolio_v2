@@ -10,6 +10,7 @@ import PlayButton from '../../Accessibility/PlayButton';
 const useStyles = makeStyles(() => ({
   root: {
     position: 'relative',
+    overflow: 'hidden',
   },
   btnContainer: {
     position: 'absolute',
@@ -50,6 +51,7 @@ const GitHubButton = () => {
           hover='none'
           color='inherit'
           target='_blank'
+          aria-label="Link to Bailee Dastugue's GitHub"
         >
           <animated.div style={styles}>
             <CircleText
@@ -66,11 +68,13 @@ const GitHubButton = () => {
       </Box>
       <Box className={classes.btnContainer}>
         <PauseButton
+          aria-label='Pause GitHub button animation'
           btnPaused={btnPaused}
           style={{ display: btnPaused ? 'none' : 'block' }}
           handlePlayPauseBtnClick={handlePlayPauseBtnClick}
         />
         <PlayButton
+          aria-label='Pause GitHub button animation'
           btnPaused={btnPaused}
           style={{ display: btnPaused ? 'block' : 'none' }}
           handlePlayPauseBtnClick={handlePlayPauseBtnClick}

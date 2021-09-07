@@ -38,7 +38,7 @@ const EmailButton = () => {
           size='small'
           specificClass='sendEmail'
         >
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shoot me
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;send me
         </CircleText>
         <CircleText
           circleId='email'

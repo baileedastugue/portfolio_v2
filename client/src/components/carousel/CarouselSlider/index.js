@@ -45,7 +45,7 @@ const CarouselSlider = (props) => {
     <Grid container direction='row' justifyContent='center' alignItems='center'>
       <Grid item className={classes.carouselContainer} xs={12}>
         {slides.map((slide, i) => (
-          <Grid item key={i} ref={slideRef} xPosition={xPosition}>
+          <Grid item key={i} ref={slideRef} xposition={xPosition}>
             <Card
               className={classes.cardDisplayed}
               style={{

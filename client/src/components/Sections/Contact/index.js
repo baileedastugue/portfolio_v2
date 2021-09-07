@@ -10,10 +10,10 @@ const Contact = (props) => {
       <Typography variant='h2'>Contact</Typography>
       <GitHubButton />
       <Grid container justifyContent='center'>
-        <Grid xs={6}>
+        <Grid item xs={6}>
           <LinkedInButton />
         </Grid>
-        <Grid xs={6}>
+        <Grid item xs={6}>
           <EmailButton />
         </Grid>
       </Grid>
