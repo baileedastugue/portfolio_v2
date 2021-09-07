@@ -24,12 +24,7 @@ const useStyles = makeStyles(() => ({
 const EmailButton = () => {
   const classes = useStyles();
   return (
-    <Link
-      href='mailto: bailee.dast@gmail.com'
-      color='inherit'
-      target='_blank'
-      hover='none'
-    >
+    <Link href='mailto: bailee.dast@gmail.com' color='inherit' hover='none'>
       <Box className={classes.root}>
         <CircleText
           circleId='sendEmail'
