@@ -23,7 +23,7 @@ const TechStack = (props) => {
 
   return (
     <Box id={props.id} style={{ paddingTop: '120px', marginTop: '-120px' }}>
-      <Typography variant='h2'>My Tech Stack</Typography>
+      <Typography variant='h2'>Tech Stack</Typography>
       <InView onChange={setInView}>
         {({ ref, inView }) => (
           <List ref={ref} className={classes.root}>

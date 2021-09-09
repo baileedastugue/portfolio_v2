@@ -40,8 +40,6 @@ const theme = createTheme({
         '&:focus': {
           borderRadius: '100%',
           outline: 'none',
-          border: 'solid 1px',
-          borderColor: globalTheme.palette.primary.main,
         },
       },
     },

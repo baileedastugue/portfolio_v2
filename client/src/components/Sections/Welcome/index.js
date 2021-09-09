@@ -4,26 +4,33 @@ import { makeStyles } from '@material-ui/core/styles';
 import { InView } from 'react-intersection-observer';
 import { Box, Typography } from '@material-ui/core';
 import theme from '../../Layout/ThemeProvider';
+import PersonalImage from '../../Layout/PersonalImage';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     height: '300px',
-    marginBottom: '15%',
+    marginBottom: '5%',
+    position: 'relative',
+    [theme.breakpoints.up(1024)]: {
+      marginBottom: '10%',
+    },
   },
   animation: {
-    fontSize: '30px',
-    // height: '40px',
+    fontSize: '1.55rem',
     margin: '0 0 12px',
     lineHeight: 1,
+    [theme.breakpoints.up(375)]: {
+      fontSize: '1.8rem',
+    },
     [theme.breakpoints.up(425)]: {
-      fontSize: '30px',
+      fontSize: '2rem',
     },
     [theme.breakpoints.up(768)]: {
-      fontSize: '40px',
+      fontSize: '2.5rem',
       margin: '0 0 15px',
     },
     [theme.breakpoints.up(1024)]: {
-      fontSize: '55px',
+      fontSize: '2.8rem',
       margin: '0 0 25px',
     },
   },
@@ -123,6 +130,7 @@ const Welcome = (props) => {
               </Typography>
             </animated.div>
           ))}
+          <PersonalImage />
         </Box>
       )}
     </InView>
