@@ -36,6 +36,15 @@ const useStyles = makeStyles((theme) => ({
     '& span': {
       width: 'unset',
     },
+    '&:hover': {
+      color: theme.palette.primary.main,
+    },
+    '&:active': {
+      color: theme.palette.primary.dark,
+    },
+    [theme.breakpoints.up(768)]: {
+      left: '99%',
+    },
   },
 }));
 
