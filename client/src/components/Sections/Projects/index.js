@@ -8,7 +8,7 @@ const Projects = (props) => {
   return (
     <Box id={props.id} style={{ paddingTop: '120px', marginTop: '-120px' }}>
       <Typography variant='h2'>Projects</Typography>
-      <CarouselContainer slides={projectsData}>
+      <CarouselContainer slides={projectsData} style={{ height: '100%' }}>
         <ProjectCard />
       </CarouselContainer>
     </Box>

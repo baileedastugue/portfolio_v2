@@ -1,10 +1,10 @@
 import React from 'react';
 import CircleText from '../../../Layout/CircleText';
-import { Link, Box } from '@material-ui/core';
+import { Button, Link, Box } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
 import MailOutlineSharpIcon from '@material-ui/icons/MailOutlineSharp';
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     position: 'relative',
     width: '100px',
@@ -12,6 +12,7 @@ const useStyles = makeStyles(() => ({
     height: '120px',
     padding: '10px 0',
   },
+
   icon: {
     position: 'absolute',
     left: '50%',
@@ -24,29 +25,31 @@ const useStyles = makeStyles(() => ({
 const EmailButton = () => {
   const classes = useStyles();
   return (
-    <Link href='mailto: bailee.dast@gmail.com' color='inherit' hover='none'>
-      <Box className={classes.root}>
-        <CircleText
-          circleId='sendEmail'
-          placement='top'
-          fontStyle='heading-primary'
-          size='small'
-          specificClass='sendEmail'
-        >
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;send me
-        </CircleText>
-        <CircleText
-          circleId='email'
-          placement='bottom'
-          fontStyle='heading-primary'
-          size='small'
-          specificClass='email'
-        >
-          &nbsp;&nbsp;&nbsp;an email
-        </CircleText>
-        <MailOutlineSharpIcon fontStyle='large' className={classes.icon} />
-      </Box>
-    </Link>
+    <Button variant='contained'>
+      <Link href='mailto: bailee.dast@gmail.com' color='inherit' hover='none'>
+        <Box className={classes.root}>
+          <CircleText
+            circleId='sendEmail'
+            placement='top'
+            fontStyle='heading-primary'
+            size='small'
+            specificClass='sendEmail'
+          >
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;send me
+          </CircleText>
+          <CircleText
+            circleId='email'
+            placement='bottom'
+            fontStyle='heading-primary'
+            size='small'
+            specificClass='email'
+          >
+            &nbsp;&nbsp;&nbsp;an email
+          </CircleText>
+          <MailOutlineSharpIcon fontStyle='large' className={classes.icon} />
+        </Box>
+      </Link>
+    </Button>
   );
 };
 

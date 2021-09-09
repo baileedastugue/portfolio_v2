@@ -7,7 +7,7 @@ import { useMediaQuery } from '@material-ui/core';
 import CarouselTitle from '../CarouselTitle';
 import Grid from '@material-ui/core/Grid';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   root: (styleProps) => ({
     display: 'flex',
     width: styleProps.width,
@@ -15,11 +15,14 @@ const useStyles = makeStyles({
     position: 'relative',
     padding: 0,
     marginBottom: '10%',
+    [theme.breakpoints.up(1024)]: {
+      marginBottom: '7%',
+    },
   }),
   alignTextEnd: {
     textAlign: 'end',
   },
-});
+}));
 
 const CarouselContainer = (props) => {
   const [slideWidth, setSlideWidth] = useState(0);
@@ -48,6 +51,14 @@ const CarouselContainer = (props) => {
     slidesShowing = 2;
     styleProps = { width: slideWidth * (slidesShowing + 0.5) + 'px' };
   }
+  if (useMediaQuery(theme.breakpoints.up(1440))) {
+    slidesShowing = 3;
+    if (slides.length <= slidesShowing) {
+      styleProps = { width: slideWidth * slidesShowing + 'px' };
+    } else {
+      styleProps = { width: slideWidth * (slidesShowing + 0.5) + 'px' };
+    }
+  }
 
   const classes = useStyles(styleProps);
 
@@ -57,15 +68,17 @@ const CarouselContainer = (props) => {
         <Grid item xs={6}>
           <CarouselTitle>{carouselName}</CarouselTitle>
         </Grid>
-        <Grid item xs={6} className={classes.alignTextEnd}>
-          <CarouselButtons
-            prevCard={prevCard}
-            nextCard={nextCard}
-            index={index}
-            slides={slides}
-            slidesShowing={slidesShowing}
-          />
-        </Grid>
+        {slides.length > slidesShowing && (
+          <Grid item xs={6} className={classes.alignTextEnd}>
+            <CarouselButtons
+              prevCard={prevCard}
+              nextCard={nextCard}
+              index={index}
+              slides={slides}
+              slidesShowing={slidesShowing}
+            />
+          </Grid>
+        )}
       </Grid>
       <Container fluid='true' className={classes.root}>
         <CarouselSlider

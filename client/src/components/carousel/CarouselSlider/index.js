@@ -7,16 +7,16 @@ const useStyles = makeStyles((theme) => ({
   cardDisplayed: {
     margin: '10px 10px 10px 0',
     width: '200px',
-    // flexDirection: 'column',
     height: '100%',
-    // display: 'flex',
     padding: 0,
     transition: 'transform 0.6s ease-in-out',
-    // justifyContent: 'center',
     borderRadius: 0,
     [theme.breakpoints.up(425)]: {
       width: '200px',
       margin: '10px 25px 20px 0',
+    },
+    [theme.breakpoints.up(1024)]: {
+      width: '300px',
     },
   },
   carouselContainer: {
@@ -49,7 +49,9 @@ const CarouselSlider = (props) => {
                 transform: `translateX(${xPosition}px)`,
               }}
             >
-              {React.cloneElement(props.children, { slide: slide })}
+              {React.cloneElement(props.children, {
+                slide: slide,
+              })}
             </Card>
           </Grid>
         ))}

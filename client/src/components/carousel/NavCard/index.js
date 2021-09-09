@@ -5,19 +5,24 @@ import { Link } from 'react-scroll';
 
 const useStyles = makeStyles((theme) => ({
   root: (styleProps) => ({
+    display: 'flex',
     alignItems: 'center',
-    backgroundImage: styleProps.backgroundImage,
-    backgroundRepeat: 'none',
-    backgroundSize: 'cover',
-    height: '100%',
+    justifyContent: 'center',
+    padding: 0,
     width: '100%',
+    border: '1px solid transparent',
+    '&:hover': {
+      borderColor: theme.palette.primary.light,
+      cursor: 'pointer',
+      color: theme.palette.primary.main,
+    },
   }),
   navTitle: {
-    textTransform: 'uppercase',
-    wordWrap: 'break-word',
-    fontSize: '4rem',
+    textTransform: 'capitalize',
+    fontSize: '2.5rem',
     letterSpacing: '.1rem',
     listStyleType: 'none',
+    fontFamily: ['Vidaloka', 'serif'].join(','),
   },
   navDetails: {
     opacity: 0,

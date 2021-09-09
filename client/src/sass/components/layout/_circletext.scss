@@ -7,6 +7,9 @@
     display: block;
     overflow: visible;
     stroke: black;
+    :focus {
+      border: none;
+    }
   }
   &-top {
     &--large {
@@ -74,6 +77,10 @@
       font-size: 1.4rem;
     }
   }
+  &.dev {
+    letter-spacing: 1px;
+  }
+
   &.linkedIn {
     letter-spacing: 5px;
   }

@@ -9,6 +9,7 @@ const Logo = (props) => {
         placement='top'
         fontStyle='heading-primary'
         size={props.size}
+        specificClass='bd'
       >
         &nbsp;Bailee Dastugue
       </CircleText>
@@ -16,6 +17,7 @@ const Logo = (props) => {
         circleId='development'
         placement='bottom'
         fontStyle='heading-primary'
+        specificClass='dev'
         size={props.size}
       >
         &nbsp;Development

@@ -5,15 +5,34 @@ import CarouselModal from '../CarouselModal';
 import ViewRepoButton from '../../Buttons/ViewRepoButton';
 import ViewLiveSiteButton from '../../Buttons/ViewLiveSiteButton';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   root: {
+    display: 'flex',
     alignItems: 'center',
+    justifyContent: 'center',
     listStyleType: 'none',
     textAlign: 'center',
+    border: '1px solid transparent',
+    '&:hover': {
+      border: '1px solid',
+      borderColor: theme.palette.primary.main,
+      color: theme.palette.primary.main,
+      cursor: 'pointer',
+    },
+  },
+  navTitle: {
+    textTransform: 'capitalize',
+    fontSize: '2rem',
+    letterSpacing: '1px',
+    listStyleType: 'none',
+    fontFamily: ['Vidaloka', 'serif'].join(','),
+    [theme.breakpoints.up(1024)]: {
+      fontSize: '3rem',
+    },
   },
   about: {
     overflow: 'auto',
-    height: '20vh',
+    height: '25vh',
     border: '1px solid #000',
     padding: '4%',
     '& ul': {
@@ -27,18 +46,22 @@ const useStyles = makeStyles({
   title: {
     display: 'inline',
     textAlign: 'center',
+    marginBottom: '1vh',
   },
   video: {
-    maxHeight: '30vh',
+    height: '40vh',
     margin: '0 auto 5%',
+    alignItems: 'center',
+    listStyleType: 'none',
+    textAlign: 'center',
   },
   sideBtns: {
-    height: '10vh',
+    height: '12.5vh',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
   },
-});
+}));
 
 const ProjectCard = ({ slide }) => {
   const classes = useStyles();
@@ -84,14 +107,15 @@ const ProjectCard = ({ slide }) => {
           <Grid item xs={12} className={classes.title}>
             <h3>{name}</h3>
           </Grid>
-          <Grid item xs={12} className={classes.root}>
+          <Grid item xs={12} className={classes.video}>
             <img
               src={videoUrl}
               alt={videoDescription}
               className={classes.video}
+              style={{ height: '40vh' }}
             />
           </Grid>
-          <Grid item xs={9} className={classes.about}>
+          <Grid item xs={8} className={classes.about}>
             <h4>Background:</h4> <p>{detail}</p>
             <h4>Built with:</h4>
             <ul>
@@ -101,7 +125,7 @@ const ProjectCard = ({ slide }) => {
             </ul>
             <h4>And Beyond:</h4> <p>{nextSteps}</p>
           </Grid>
-          <Grid item xs={3}>
+          <Grid item xs={4}>
             <Grid item xs={12} className={classes.sideBtns}>
               <ViewRepoButton repoLink={repo} />
             </Grid>

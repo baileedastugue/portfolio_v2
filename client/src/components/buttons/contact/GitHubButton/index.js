@@ -7,16 +7,29 @@ import { useSpring, animated } from '@react-spring/web';
 import PauseButton from '../../Accessibility/PauseButton';
 import PlayButton from '../../Accessibility/PlayButton';
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     position: 'relative',
     overflow: 'hidden',
+    marginBottom: '3vh',
   },
   btnContainer: {
     position: 'absolute',
     left: '87%',
     top: '87%',
     transform: 'translate(-50%, -50%)',
+    [theme.breakpoints.up(768)]: {
+      top: '80%',
+      left: '69%',
+    },
+    [theme.breakpoints.up(1024)]: {
+      top: '84%',
+      left: '66%',
+    },
+    [theme.breakpoints.up(1440)]: {
+      top: '81%',
+      left: '62%',
+    },
   },
   icon: {
     position: 'absolute',
@@ -24,6 +37,14 @@ const useStyles = makeStyles(() => ({
     left: '50%',
     transform: 'translate(-50%, -50%)',
     fontSize: '5rem',
+  },
+  link: {
+    '&:hover': {
+      color: theme.palette.primary.main,
+    },
+    '&:active': {
+      color: theme.palette.primary.dark,
+    },
   },
 }));
 
@@ -52,6 +73,7 @@ const GitHubButton = () => {
           color='inherit'
           target='_blank'
           aria-label="Link to Bailee Dastugue's GitHub"
+          className={classes.link}
         >
           <animated.div style={styles}>
             <CircleText

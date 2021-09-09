@@ -8,9 +8,9 @@ const Trail = ({ inView, children }) => {
     config: { mass: 1, tension: 120, friction: 14 },
     opacity: inView || animationComplete ? 1 : 0,
     x: inView || animationComplete ? 0 : 20,
-    height: inView || animationComplete ? 20 : 0,
+    // height: inView || animationComplete ? 20 : 0,
     delay: 500,
-    from: { opacity: 0, x: 20, height: 20 },
+    from: { opacity: 0, x: 20 },
     onRest: () => inView && setAnimationComplete(true),
   });
 

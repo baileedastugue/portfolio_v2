@@ -10,6 +10,14 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
+    maxWidth: '100vw',
+    margin: '0 auto',
+    [theme.breakpoints.up(1024)]: {
+      maxWidth: '75vw',
+    },
+    [theme.breakpoints.up(1400)]: {
+      maxWidth: '60vw',
+    },
   },
   paper: {
     position: 'relative',

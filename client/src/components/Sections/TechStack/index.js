@@ -5,15 +5,19 @@ import { InView } from 'react-intersection-observer';
 import { makeStyles } from '@material-ui/core/styles';
 import Trail from '../../Animations/Trail';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((listLength) => ({
   root: {
-    height: '200px',
+    height: `calc(${listLength} * 30)`,
+    fontSize: '1.2rem',
+    '& li': {
+      padding: '0 25px 10px',
+    },
   },
-});
+}));
 
 const TechStack = (props) => {
-  const classes = useStyles();
-
+  const listLength = techStackData.length;
+  const classes = useStyles(listLength);
   //eslint-disable-next-line
   const [inView, setInView] = useState(false);
 

@@ -3,6 +3,7 @@ import { useTransition, animated } from '@react-spring/web';
 import { makeStyles } from '@material-ui/core/styles';
 import { InView } from 'react-intersection-observer';
 import { Box, Typography } from '@material-ui/core';
+import theme from '../../Layout/ThemeProvider';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -22,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
       margin: '0 0 15px',
     },
     [theme.breakpoints.up(1024)]: {
-      fontSize: '60px',
+      fontSize: '55px',
       margin: '0 0 25px',
     },
   },
@@ -46,7 +47,7 @@ const Welcome = (props) => {
       {
         opacity: 1,
         y: 0,
-        color: '#808080',
+        color: theme.palette.text.secondary,
       },
     ],
     update: { color: '#808080' },
@@ -113,7 +114,10 @@ const Welcome = (props) => {
                 component='p'
                 className={classes.animation}
                 key={key.key}
-                style={{ color: key.key === 'Bailee Dastugue' && 'black' }}
+                style={{
+                  color:
+                    key.key === 'Bailee Dastugue' && theme.palette.text.primary,
+                }}
               >
                 {animatedItem}
               </Typography>

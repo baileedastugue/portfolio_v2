@@ -1,24 +1,32 @@
 import React from 'react';
 import { Typography, Box } from '@material-ui/core';
+import { makeStyles } from '@material-ui/styles';
+
+const useStyles = makeStyles((theme) => ({
+  paragraph: {
+    fontSize: '1.2rem',
+  },
+}));
 
 const About = (props) => {
+  const classes = useStyles();
   return (
     <Box id={props.id} style={{ paddingTop: '120px', marginTop: '-120px' }}>
       <Typography variant='h2'>About Bailee,</Typography>
-      <Typography paragraph>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis
-        accumsan ipsum, quis iaculis elit. Sed venenatis feugiat finibus.
-        Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed vitae
-        scelerisque ex.
+      <Typography paragraph className={classes.paragraph}>
+        As a developer, I engage the same part of my brain that loves organic
+        chemistry and that part that needs text to be vertically and
+        horizontally centered. While I gravitate towards the front end, I'm
+        willing, able, and excited to tackle the full stack. My positive
+        attitude is a constant - I start every scrum with a "good morning", no
+        matter how many blockers I have to report that day. My attention to
+        detail, my ability to communicate cross functionally from designer to
+        developer, and my focus on business priorities makes me an asset to any
+        team.
       </Typography>
-      <Typography paragraph>
-        Vivamus pulvinar nibh odio, ac bibendum velit viverra a. Fusce ac tellus
-        et leo ullamcorper facilisis a id sapien. Duis vestibulum erat interdum
-        fringilla placerat. Maecenas ac ultrices turpis. In accumsan enim at
-        eleifend iaculis. Sed erat justo, bibendum sed lorem vel, finibus
-        venenatis est. Morbi in nulla sapien. Curabitur lacinia sem eu turpis
-        ultrices interdum. Donec pharetra viverra ipsum, condimentum pretium
-        ante pellentesque quis.
+      <Typography paragraph className={classes.paragraph}>
+        In my free time, I'm watching Star Trek with my husband, teaching myself
+        how to knit (again!), and listening to an absurd amount of Billy Joel.
       </Typography>
     </Box>
   );

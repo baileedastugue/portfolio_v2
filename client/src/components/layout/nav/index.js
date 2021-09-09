@@ -5,10 +5,16 @@ import Logo from '../Logo';
 import { AppBar, Grid, Toolbar } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     margin: '0 0 10%',
     backgroundColor: 'rgba(255, 255, 255, .97)',
+    [theme.breakpoints.up(1024)]: {
+      margin: '0 0 7%',
+    },
+    [theme.breakpoints.up(1440)]: {
+      margin: '0 0 4%',
+    },
   },
   gridItemCenter: {
     display: 'flex',
