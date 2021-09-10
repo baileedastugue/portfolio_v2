@@ -80,14 +80,19 @@
   &.dev {
     letter-spacing: 1px;
   }
-
   &.linkedIn {
     letter-spacing: 5px;
   }
   &.email {
     letter-spacing: 3px;
   }
-  &.connect, &.linkedIn, &.sendEmail, &.email, &.pdf {
+  &.download {
+    letter-spacing: 1.5px;
+  }
+  &.pdf {
+    letter-spacing: 5.2px;
+  }
+  &.connect, &.linkedIn, &.sendEmail, &.email, &.pdf, &.download {
     svg{
       stroke: none;
     }

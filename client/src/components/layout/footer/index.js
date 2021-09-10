@@ -4,7 +4,7 @@ import { AppBar, Toolbar, Grid, Typography } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   appBar: {
-    marginTop: '5%',
+    marginTop: '7vh',
   },
 }));
 
