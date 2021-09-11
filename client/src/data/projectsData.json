@@ -19,16 +19,5 @@
     "techUsed": ["React", "Redux", "Sass", "NodeJS", "MongoDB", "Express", "Reactstrap", "BCrypt", "Cloudinary API"],
     "repo": "",
     "nextSteps": ""
-  },
-  {
-    "id": 2,
-    "name": "Category Header Creator",
-    "videoUrl": "https://images.unsplash.com/photo-1530610476181-d83430b64dcd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1275&q=80",
-    "videoDescription": "",
-    "detail": "",
-    "techUsed": ["React", "Sass", "Reactstrap"],
-    "liveSite": "",
-    "repo": "",
-    "nextSteps": ""
   }
 ]

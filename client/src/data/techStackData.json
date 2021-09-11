@@ -1,43 +1,34 @@
 [
   {
     "id": 0,
-    "tech": "JavaScript",
-    "details": "ah yes, some details about my knowledge"
+    "tech": "JavaScript"
   },
   {
     "id": 1,
-    "tech": "React",
-    "details": "ah yes, some details about my knowledge"
+    "tech": "React"
   },
   {
     "id": 2,
-    "tech": "CSS and Sass",
-    "details": "ah yes, some details about my knowledge"
+    "tech": "CSS and Sass"
   },
   {
     "id": 3,
-    "tech": "HTML5",
-    "details": "ah yes, some details about my knowledge"
+    "tech": "Semantic HTML"
   },
   {
     "id": 4,
-    "tech": "NodeJS",
-    "details": "ah yes, some details about my knowledge"
+    "tech": "NodeJS"
   },
   {
     "id": 5,
-    "tech": "Redux",
-    "details": "ah yes, some details about my knowledge"
+    "tech": "Redux"
   },
   {
     "id": 6,
-    "tech": "MongoDB",
-    "details": "ah yes, some details about my knowledge"
+    "tech": "MongoDB"
   },
   {
     "id": 7,
-    "tech": "Express",
-    "details": "ah yes, some details about my knowledge"
+    "tech": "Express"
   }
-
 ]

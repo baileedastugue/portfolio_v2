@@ -76,10 +76,11 @@ const Resume = (props) => {
             <Typography>Kendra Scott - Junior Front End Developer</Typography>
           </AccordionSummary>
           <AccordionDetails>
-            Developed __ full homepage refreshes and __ additional homepage
-            banners, landing pages, and category headers while collaborating
-            with web merchandising, creative, and copy team, complying with ADA
-            standards for all code, and responding to emerging business needs.
+            Developed 19 full homepage refreshes and 105 additional banners,
+            landing pages, and category headers while collaborating with web
+            merchandising, email marketing, creative, and copy teams, complying
+            with ADA standards for all code, and responding to emerging business
+            needs.
             <br />
             <br />
             Ensured ADA-compliance on all homepage updates resulting in zero
@@ -93,10 +94,11 @@ const Resume = (props) => {
             vitals.
             <br />
             <br />
-            Delivered __ engraving products on schedule while working with
-            third-party vendors and improving customer experience by ensuring
-            the front-end rendering matches the physical engraving. Launched __
-            custom Color Bar products and __ Color Bar stones on schedule.
+            Delivered 24 engraving products on schedule and added a new font
+            while working with third-party vendors and improving customer
+            experience by ensuring the front-end rendering matches the physical
+            engraving. Launched 9 custom Color Bar products and 8 Color Bar
+            stones on schedule.
           </AccordionDetails>
         </Accordion>
         <Accordion>
