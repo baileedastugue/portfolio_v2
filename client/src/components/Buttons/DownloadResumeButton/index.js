@@ -3,6 +3,7 @@ import CircleText from '../../Layout/CircleText';
 import { Link, Box, Button } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
 import GetAppSharpIcon from '@material-ui/icons/GetAppSharp';
+import ResumePDF from '../../../files/BaileeDastugue_Resume.pdf';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -36,11 +37,12 @@ const DownloadResumeButton = () => {
   return (
     <Button variant='contained' className={classes.button}>
       <Link
-        href='/files/BaileeDastugue_resume.pdf'
+        href={ResumePDF}
         color='inherit'
         target='_blank'
         hover='none'
-        download
+        rel='noreferrer'
+        download='BaileeDastugue_Resume.pdf'
       >
         <Box className={classes.root}>
           <CircleText
