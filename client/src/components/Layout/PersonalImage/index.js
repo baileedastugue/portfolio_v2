@@ -90,7 +90,7 @@ const PersonalImage = () => {
   const classes = useStyles();
   return (
     <Fragment>
-      <div className={classes.root} />;
+      <div className={classes.root} />
       <div className={classes.cat} />
     </Fragment>
   );
