@@ -32,10 +32,10 @@ const useStyles = makeStyles((theme) => ({
   },
   about: {
     overflow: 'auto',
-    height: '25vh',
+    height: '20vh',
     border: '1px solid #000',
     padding: '4%',
-    marginBottom: '4vh',
+    marginBottom: '2vh',
     '& ul': {
       padding: 0,
     },
@@ -43,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
       listStyleType: 'none',
       display: 'inline',
     },
-    [theme.breakpoints.up(1024)]: {
+    [theme.breakpoints.up('sm')]: {
       marginBottom: 0,
     },
   },
@@ -56,7 +56,7 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: '100%',
     width: 'auto',
     maxHeight: '40vh',
-    margin: '0 auto 5%',
+    margin: '0 auto 1vh',
     alignItems: 'center',
     listStyleType: 'none',
     textAlign: 'center',
@@ -87,7 +87,7 @@ const ProjectCard = ({ slide }) => {
     nextSteps,
   } = slide;
 
-  const buttonHeight = { height: liveSite ? '12.5vh' : '25vh' };
+  const buttonHeight = { height: liveSite ? '10vh' : '20vh' };
   const classes = useStyles(buttonHeight);
   const handleOpen = () => {
     setModalOpen(true);

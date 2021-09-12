@@ -23,8 +23,15 @@ const theme = createTheme({
     },
   },
   overrides: {
+    MuiList: {
+      padding: {
+        paddingTop: 0,
+        paddingBottom: 0,
+      },
+    },
     MuiCardContent: {
       root: {
+        padding: 0,
         '&:last-child': {
           paddingBottom: 'none',
         },

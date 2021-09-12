@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   button: {
-    marginBottom: '3vh',
+    margin: '2vh auto',
   },
 }));
 

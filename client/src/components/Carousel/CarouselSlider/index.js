@@ -5,7 +5,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
   cardDisplayed: {
-    margin: '10px',
+    margin: '0 10px 0 0',
     width: '200px',
     height: '100%',
     padding: 0,
@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: 0,
     [theme.breakpoints.up(425)]: {
       width: '200px',
-      margin: '10px 15px 20px',
+      // margin: '10px 15px 20px',
     },
     [theme.breakpoints.up(1024)]: {
       width: '300px',
@@ -39,13 +39,7 @@ const CarouselSlider = (props) => {
   const classes = useStyles();
 
   return (
-    <Grid
-      container
-      direction='row'
-      justifyContent='center'
-      alignItems='center'
-      spacing={2}
-    >
+    <Grid container direction='row' justifyContent='center' alignItems='center'>
       <Grid item className={classes.carouselContainer} xs={12}>
         {slides.map((slide, i) => (
           <Grid item key={i} ref={slideRef} xposition={xPosition}>

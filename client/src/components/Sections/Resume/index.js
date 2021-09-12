@@ -13,10 +13,10 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 const useStyles = makeStyles({
   title: {
-    marginBottom: '2vh',
+    marginBottom: '1vh',
   },
   lastAccordion: {
-    marginBottom: '4vh',
+    marginBottom: '2vh',
   },
 });
 

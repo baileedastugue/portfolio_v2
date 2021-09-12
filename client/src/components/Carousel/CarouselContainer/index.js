@@ -9,14 +9,13 @@ import Grid from '@material-ui/core/Grid';
 
 const useStyles = makeStyles((theme) => ({
   root: (styleProps) => ({
-    display: 'flex',
     width: styleProps.width,
     justifyContent: styleProps.justifyContent,
-    overflowX: 'clip',
+    overflowX: 'hidden',
     position: 'relative',
     flexBasis: styleProps.flexBasis,
-    padding: 0,
-    marginBottom: '10%',
+    padding: '3px 0 3px 3px',
+    margin: '1vh auto',
     [theme.breakpoints.up(1024)]: {
       marginBottom: '7%',
     },
