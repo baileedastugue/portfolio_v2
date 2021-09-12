@@ -33,6 +33,7 @@ const theme = createTheme({
     MuiLink: {
       root: {
         '&:hover': {
+          textDecoration: 'none',
           borderColor: globalTheme.palette.primary.main,
           backgroundColor: 'unset',
           color: globalTheme.palette.primary.main,

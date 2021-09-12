@@ -69,7 +69,7 @@ const GitHubButton = () => {
       <Box className={classes.root}>
         <Link
           href='https://github.com/baileedastugue'
-          hover='none'
+          underline='none'
           color='inherit'
           target='_blank'
           aria-label="Link to Bailee Dastugue's GitHub"

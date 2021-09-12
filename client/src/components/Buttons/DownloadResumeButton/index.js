@@ -40,7 +40,7 @@ const DownloadResumeButton = () => {
         href={ResumePDF}
         color='inherit'
         target='_blank'
-        hover='none'
+        underline='none'
         rel='noreferrer'
         download='BaileeDastugue_Resume.pdf'
       >

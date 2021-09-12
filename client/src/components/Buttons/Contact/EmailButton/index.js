@@ -26,7 +26,11 @@ const EmailButton = () => {
   const classes = useStyles();
   return (
     <Button variant='contained'>
-      <Link href='mailto: bailee.dast@gmail.com' color='inherit' hover='none'>
+      <Link
+        href='mailto: bailee.dast@gmail.com'
+        color='inherit'
+        underline='none'
+      >
         <Box className={classes.root}>
           <CircleText
             circleId='sendEmail'

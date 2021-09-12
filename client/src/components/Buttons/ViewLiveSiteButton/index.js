@@ -15,7 +15,7 @@ const useStyles = makeStyles(() => ({
 const ViewLiveSiteButton = ({ liveSiteLink }) => {
   const classes = useStyles();
   return (
-    <Link href={liveSiteLink} color='inherit' target='_blank' hover='none'>
+    <Link href={liveSiteLink} color='inherit' target='_blank' underline='none'>
       <Button variant='contained'>
         <Box className={classes.root}>
           <CircleText
