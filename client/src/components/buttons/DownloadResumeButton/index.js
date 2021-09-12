@@ -35,7 +35,13 @@ const DownloadResumeButton = () => {
   const classes = useStyles();
   return (
     <Button variant='contained' className={classes.button}>
-      <Link color='inherit' target='_blank' hover='none'>
+      <Link
+        href='/files/BaileeDastugue_resume.pdf'
+        color='inherit'
+        target='_blank'
+        hover='none'
+        download
+      >
         <Box className={classes.root}>
           <CircleText
             circleId='download'

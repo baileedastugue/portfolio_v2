@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
     width: '150px',
     borderRadius: '100%',
     backgroundImage:
-      'url(https://res.cloudinary.com/dp9ndx3oj/image/upload/v1594142495/xc7c1orpciacprspsze0.jpg)',
+      'url(https://res.cloudinary.com/dp9ndx3oj/image/upload/v1631408308/bdastugue/Bailee.jpg)',
     backgroundSize: 'cover',
     [theme.breakpoints.up(375)]: {
       bottom: '-10px',

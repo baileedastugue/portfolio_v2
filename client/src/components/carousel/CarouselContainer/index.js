@@ -11,8 +11,10 @@ const useStyles = makeStyles((theme) => ({
   root: (styleProps) => ({
     display: 'flex',
     width: styleProps.width,
+    justifyContent: styleProps.justifyContent,
     overflowX: 'clip',
     position: 'relative',
+    flexBasis: styleProps.flexBasis,
     padding: 0,
     marginBottom: '10%',
     [theme.breakpoints.up(1024)]: {
@@ -49,12 +51,22 @@ const CarouselContainer = (props) => {
   }
   if (useMediaQuery(theme.breakpoints.up('sm'))) {
     slidesShowing = 2;
-    styleProps = { width: slideWidth * (slidesShowing + 0.5) + 'px' };
+    if (slides.length <= slidesShowing) {
+      styleProps = {
+        width: slideWidth * slides.length + 'px',
+        justifyContent: 'center',
+      };
+    } else {
+      styleProps = { width: slideWidth * (slidesShowing + 0.5) + 'px' };
+    }
   }
   if (useMediaQuery(theme.breakpoints.up(1440))) {
     slidesShowing = 3;
     if (slides.length <= slidesShowing) {
-      styleProps = { width: slideWidth * slidesShowing + 'px' };
+      styleProps = {
+        width: slideWidth * slides.length + 'px',
+        justifyContent: 'center',
+      };
     } else {
       styleProps = { width: slideWidth * (slidesShowing + 0.5) + 'px' };
     }
