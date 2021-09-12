@@ -35,12 +35,16 @@ const useStyles = makeStyles((theme) => ({
     height: '25vh',
     border: '1px solid #000',
     padding: '4%',
+    marginBottom: '4vh',
     '& ul': {
       padding: 0,
     },
     '& li': {
       listStyleType: 'none',
       display: 'inline',
+    },
+    [theme.breakpoints.up(1024)]: {
+      marginBottom: 0,
     },
   },
   title: {
@@ -49,35 +53,42 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: '1vh',
   },
   video: {
-    height: '40vh',
+    maxWidth: '100%',
+    width: 'auto',
+    maxHeight: '40vh',
     margin: '0 auto 5%',
     alignItems: 'center',
     listStyleType: 'none',
     textAlign: 'center',
   },
-  sideBtns: {
-    height: '12.5vh',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-  },
+  sideBtns: (buttonHeight) => ({
+    height: buttonHeight.height,
+    display: 'inline',
+    [theme.breakpoints.up('sm')]: {
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+    },
+  }),
 }));
 
 const ProjectCard = ({ slide }) => {
-  const classes = useStyles();
   const [modalOpen, setModalOpen] = useState(false);
 
   const {
     name,
     videoUrl,
     videoDescription,
-    detail,
+    detail1,
+    detail2,
     techUsed,
     liveSite,
     repo,
     nextSteps,
   } = slide;
 
+  const buttonHeight = { height: liveSite ? '12.5vh' : '25vh' };
+  const classes = useStyles(buttonHeight);
   const handleOpen = () => {
     setModalOpen(true);
   };
@@ -112,11 +123,15 @@ const ProjectCard = ({ slide }) => {
               src={videoUrl}
               alt={videoDescription}
               className={classes.video}
-              style={{ height: '40vh' }}
             />
           </Grid>
-          <Grid item xs={8} className={classes.about}>
-            <h4>Background:</h4> <p>{detail}</p>
+          <Grid
+            item
+            xs={12}
+            sm={repo || liveSite ? 8 : 12}
+            className={classes.about}
+          >
+            <h4>Background:</h4> <p>{detail1}</p> {detail2 && <p>{detail2}</p>}
             <h4>Built with:</h4>
             <ul>
               {techUsed.map((tech, index) => (
@@ -125,13 +140,17 @@ const ProjectCard = ({ slide }) => {
             </ul>
             <h4>And Beyond:</h4> <p>{nextSteps}</p>
           </Grid>
-          <Grid item xs={4}>
-            <Grid item xs={12} className={classes.sideBtns}>
-              <ViewRepoButton repoLink={repo} />
-            </Grid>
-            <Grid item xs={12} className={classes.sideBtns}>
-              <ViewLiveSiteButton liveSiteLink={liveSite} />
-            </Grid>
+          <Grid item container xs={12} sm={4}>
+            {repo && (
+              <Grid item xs={6} sm={12} className={classes.sideBtns}>
+                <ViewRepoButton repoLink={repo} />
+              </Grid>
+            )}
+            {liveSite && (
+              <Grid item xs={6} sm={12} className={classes.sideBtns}>
+                <ViewLiveSiteButton liveSiteLink={liveSite} />
+              </Grid>
+            )}
           </Grid>
         </Grid>
       </CarouselModal>

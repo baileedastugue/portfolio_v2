@@ -2,22 +2,23 @@
   {
     "id": 0,
     "name": "Elephant's Memory",
-    "videoUrl": "https://images.unsplash.com/photo-1630661296957-833c1e00085d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80",
+    "videoUrl": "https://res.cloudinary.com/dp9ndx3oj/image/upload/v1631410388/bdastugue/ElephantsMemory.png",
     "videoDescription": "",
-    "detail": "A collaborative, private and digital memory album. This application allows users to create memory albums that others with the link can also contribute to. Memory posts include uploading a picture with a caption or a text prompt and response. Users can protect their albums and the posts within those albums with an encrypted password. Additional functionality includes changing user passwords, deleting user account, deleting albums, changing album names, adding, updating, or removing album passwords, and deleting memory posts. Both user and album passwords are encrypted though BCrypt.",
+    "detail1": "A collaborative, private and digital memory album. This application allows users to create memory albums that others with the link can also contribute to. Memory posts include uploading a picture with a caption or a text prompt and response. Users can protect their albums and the posts within those albums with an encrypted password.",
+    "detail2": "Additional functionality includes changing user passwords, deleting user account, deleting albums, changing album names, adding, updating, or removing album passwords, and deleting memory posts. Both user and album passwords are encrypted though BCrypt.",
     "techUsed": ["React", "Redux", "Sass", "NodeJS", "MongoDB", "Express", "CSS Animations", "React Spring", "Reactstrap", "BCrypt", "Cloudinary API"],
     "liveSite": "https://elephantsmemory.herokuapp.com/",
     "repo": "https://github.com/baileedastugue/elephants-memory",
-    "nextSteps": "Video functionality, notification center that alerts users when a memory post has been added to their album, update album url"
+    "nextSteps": "Expanding memory posts to include video functionality, creating a notification center that alerts users when a memory post has been added to their album, allowing users to update album URLs with a personalized or randomized album ID"
   },
   {
     "id": 1,
-    "name": "Image Uploader Abstraction",
-    "videoUrl": "https://images.unsplash.com/photo-1538220856186-0be0e085984d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1299&q=80",
+    "name": "Image Uploader Tool",
+    "videoUrl": "https://res.cloudinary.com/dp9ndx3oj/image/upload/v1631410388/bdastugue/ImageUploader.png",
     "videoDescription": "",
-    "detail": "",
+    "detail1": "A tool that allows the user to upload images and videos to be hosted on the business Cloudinary account. This full-stack MERN application allows users to create albums for organization, upload up to 10 images and videos at a time, and copy the optimized image URL address at the click of a button. Image URLs are transformed to include additional parameters to ensure performant and optimized images.",
+    "detail2": "The purpose of this application was to develop functionality to upload and host creative assets, without giving additional users full access to the business account. Through this application, the eCommerce team was able to host images while maintaining the guardrails of limited account access.",
     "techUsed": ["React", "Redux", "Sass", "NodeJS", "MongoDB", "Express", "Reactstrap", "BCrypt", "Cloudinary API"],
-    "repo": "",
-    "nextSteps": ""
+    "nextSteps": "Allow users to specify image URL naming for improved SEO, add functionality for users to create and access a 'Favorites' list of frequently used image assets, allow users to transform uploaded assets to a different format"
   }
 ]

@@ -11,6 +11,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     justifyContent: 'center',
     maxWidth: '100vw',
+    maxHeight: '100%',
     margin: '0 auto',
     [theme.breakpoints.up(1024)]: {
       maxWidth: '75vw',

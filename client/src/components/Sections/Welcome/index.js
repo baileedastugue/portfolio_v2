@@ -11,8 +11,8 @@ const useStyles = makeStyles((theme) => ({
     height: '300px',
     marginBottom: '5%',
     position: 'relative',
-    [theme.breakpoints.up(1024)]: {
-      marginBottom: '10%',
+    [theme.breakpoints.up(425)]: {
+      marginBottom: '12%',
     },
   },
   animation: {
