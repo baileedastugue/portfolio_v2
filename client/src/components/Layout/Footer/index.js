@@ -15,7 +15,7 @@ const Footer = () => {
       <Toolbar>
         <Grid container>
           <Grid item xs={12}>
-            <Typography>&copy; Bailee Dastugue 2021</Typography>
+            <Typography>&copy; Bailee Dastugue</Typography>
           </Grid>
         </Grid>
       </Toolbar>

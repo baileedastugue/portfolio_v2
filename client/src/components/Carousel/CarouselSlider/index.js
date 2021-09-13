@@ -2,6 +2,7 @@ import React, { useRef, useEffect } from 'react';
 import Card from '@material-ui/core/Card';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
+import { useDrag } from 'react-use-gesture';
 
 const useStyles = makeStyles((theme) => ({
   cardDisplayed: {
@@ -13,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: 0,
     [theme.breakpoints.up(425)]: {
       width: '200px',
-      // margin: '10px 15px 20px',
+      margin: '0 15px 0',
     },
     [theme.breakpoints.up(1024)]: {
       width: '300px',
@@ -25,16 +26,30 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const CarouselSlider = (props) => {
-  const { slides, xPosition, setSlideWidth } = props;
+  const { slides, xPosition, setSlideWidth, nextCard, prevCard, index } = props;
 
-  const slideRef = useRef();
+  const slideRef = useRef(0);
 
   useEffect(() => {
-    if (slideRef.current) {
-      const slideWidth = slideRef.current.clientWidth;
-      setSlideWidth(slideWidth);
-    }
+    const slideCurrentWidth = slideRef.current.clientWidth;
+    setSlideWidth(slideCurrentWidth);
   }, [setSlideWidth]);
+
+  const bind = useDrag(
+    ({ down, movement: [mx], direction: [xDir], distance }) => {
+      if (!down) {
+        if (xDir < 0) {
+          if (index < slides.length - 1) {
+            nextCard();
+          }
+        } else {
+          if (index > 0) {
+            prevCard();
+          }
+        }
+      }
+    }
+  );
 
   const classes = useStyles();
 
@@ -42,11 +57,9 @@ const CarouselSlider = (props) => {
     <Grid container direction='row' justifyContent='center' alignItems='center'>
       <Grid item className={classes.carouselContainer} xs={12}>
         {slides.map((slide, i) => (
-          <Grid item key={i} ref={slideRef} xposition={xPosition}>
+          <Grid item key={i} ref={slideRef} xposition={xPosition} {...bind()}>
             <Card
-              className={`${classes.cardDisplayed} ${
-                slides.length - 1 > i && classes.innerCard
-              }`}
+              className={`${classes.cardDisplayed}`}
               style={{
                 transform: `translateX(${xPosition}px)`,
               }}

@@ -40,6 +40,7 @@ const CarouselContainer = (props) => {
   const prevCard = useCallback(() => {
     setXPosition(xPosition + slideWidth);
     setIndex(index - 1);
+    console.log(index);
   }, [xPosition, slideWidth, index]);
 
   const theme = useTheme();
@@ -98,6 +99,7 @@ const CarouselContainer = (props) => {
           nextCard={nextCard}
           setSlideWidth={setSlideWidth}
           xPosition={xPosition}
+          index={index}
         >
           {props.children}
         </CarouselSlider>
