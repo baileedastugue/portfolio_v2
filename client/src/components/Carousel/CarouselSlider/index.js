@@ -3,6 +3,7 @@ import Card from '@material-ui/core/Card';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 import { useDrag } from 'react-use-gesture';
+import { isMobile } from 'react-device-detect';
 
 const useStyles = makeStyles((theme) => ({
   cardDisplayed: {
@@ -26,7 +27,15 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const CarouselSlider = (props) => {
-  const { slides, xPosition, setSlideWidth, nextCard, prevCard, index } = props;
+  const {
+    slides,
+    xPosition,
+    setSlideWidth,
+    nextCard,
+    prevCard,
+    index,
+    slidesShowing,
+  } = props;
 
   const slideRef = useRef(0);
 
@@ -36,19 +45,22 @@ const CarouselSlider = (props) => {
   }, [setSlideWidth]);
 
   const bind = useDrag(
-    ({ down, movement: [mx], direction: [xDir], distance }) => {
-      if (!down) {
-        if (xDir < 0) {
-          if (index < slides.length - 1) {
-            nextCard();
-          }
-        } else {
-          if (index > 0) {
-            prevCard();
+    ({ event, down, movement: [mx], direction: [xDir], tap, click }) => {
+      if (isMobile) {
+        if (!down && !tap && !click) {
+          if (xDir < 0) {
+            if (index < slides.length - slidesShowing) {
+              nextCard();
+            }
+          } else {
+            if (index > 0) {
+              prevCard();
+            }
           }
         }
       }
-    }
+    },
+    { delay: true }
   );
 
   const classes = useStyles();
@@ -57,7 +69,14 @@ const CarouselSlider = (props) => {
     <Grid container direction='row' justifyContent='center' alignItems='center'>
       <Grid item className={classes.carouselContainer} xs={12}>
         {slides.map((slide, i) => (
-          <Grid item key={i} ref={slideRef} xposition={xPosition} {...bind()}>
+          <Grid
+            item
+            key={i}
+            ref={slideRef}
+            xposition={xPosition}
+            {...bind()}
+            style={{ touchAction: 'none' }}
+          >
             <Card
               className={`${classes.cardDisplayed}`}
               style={{

@@ -11,14 +11,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     justifyContent: 'center',
     maxWidth: '100vw',
-    maxHeight: '100%',
     margin: '0 auto',
-    [theme.breakpoints.up(1024)]: {
-      maxWidth: '75vw',
-    },
-    [theme.breakpoints.up(1400)]: {
-      maxWidth: '60vw',
-    },
   },
   paper: {
     position: 'relative',
@@ -26,6 +19,10 @@ const useStyles = makeStyles((theme) => ({
     border: '1px solid #000',
     boxShadow: theme.shadows[5],
     padding: '5%',
+    height: '100vh',
+    [theme.breakpoints.up(1024)]: {
+      padding: '5% 20%',
+    },
   },
   closeBtn: {
     position: 'absolute',
@@ -87,8 +84,8 @@ const CarouselModal = (props) => {
   return (
     <div>
       <Modal
-        aria-labelledby=''
-        aria-describedby=''
+        aria-labelledby='modal-title'
+        aria-describedby='modal-description'
         className={classes.modal}
         open={props.modalOpen}
         onClose={props.handleClose}
@@ -106,7 +103,7 @@ const CarouselModal = (props) => {
               label='Close Modal'
               aria-label='Close Modal'
             >
-              <HighlightOffSharpIcon fontSize='medium' />
+              <HighlightOffSharpIcon fontSize='large' />
             </Button>
             {props.children}
           </div>

@@ -41,7 +41,7 @@ const DownloadResumeButton = () => {
         color='inherit'
         target='_blank'
         underline='none'
-        rel='noreferrer'
+        rel='noopener'
         download='BaileeDastugue_Resume.pdf'
       >
         <Box className={classes.root}>

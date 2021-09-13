@@ -15,7 +15,13 @@ const useStyles = makeStyles(() => ({
 const ViewRepoButton = ({ repoLink }) => {
   const classes = useStyles();
   return (
-    <Link href={repoLink} color='inherit' target='_blank' underline='none'>
+    <Link
+      href={repoLink}
+      color='inherit'
+      target='_blank'
+      underline='none'
+      rel='noopener'
+    >
       <Button variant='contained'>
         <Box className={classes.root}>
           <CircleText

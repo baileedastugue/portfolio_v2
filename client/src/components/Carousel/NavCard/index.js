@@ -31,6 +31,7 @@ const useStyles = makeStyles((theme) => ({
 
 const NavCard = ({ slide }) => {
   const { name, backgroundUrl } = slide;
+
   const styleProps = {
     backgroundImage: `url(${backgroundUrl})`,
   };

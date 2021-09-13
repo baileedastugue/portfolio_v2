@@ -72,6 +72,7 @@ const GitHubButton = () => {
           underline='none'
           color='inherit'
           target='_blank'
+          rel='noopener'
           aria-label="Link to Bailee Dastugue's GitHub"
           className={classes.link}
         >

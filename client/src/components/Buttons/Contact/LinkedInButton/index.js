@@ -29,6 +29,7 @@ const LinkedInButton = () => {
         href='https://www.linkedin.com/in/bailee-dastugue/'
         color='inherit'
         target='_blank'
+        rel='noopener'
         underline='none'
       >
         <Box className={classes.root}>

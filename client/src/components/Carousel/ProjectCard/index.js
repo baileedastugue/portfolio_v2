@@ -32,10 +32,10 @@ const useStyles = makeStyles((theme) => ({
   },
   about: {
     overflow: 'auto',
-    height: '20vh',
+    height: '25vh',
     border: '1px solid #000',
     padding: '4%',
-    marginBottom: '2vh',
+    marginBottom: '3vh',
     '& ul': {
       padding: 0,
     },
@@ -50,16 +50,18 @@ const useStyles = makeStyles((theme) => ({
   title: {
     display: 'inline',
     textAlign: 'center',
-    marginBottom: '1vh',
+    margin: '2vh auto 0',
+    height: '8vh',
   },
   video: {
     maxWidth: '100%',
     width: 'auto',
-    maxHeight: '40vh',
-    margin: '0 auto 1vh',
+    height: '40vh',
+    margin: '0 auto 2vh',
     alignItems: 'center',
     listStyleType: 'none',
     textAlign: 'center',
+    objectFit: 'contain',
   },
   sideBtns: (buttonHeight) => ({
     height: buttonHeight.height,
@@ -87,7 +89,7 @@ const ProjectCard = ({ slide }) => {
     nextSteps,
   } = slide;
 
-  const buttonHeight = { height: liveSite ? '10vh' : '20vh' };
+  const buttonHeight = { height: liveSite ? '12.5vh' : '20vh' };
   const classes = useStyles(buttonHeight);
   const handleOpen = () => {
     setModalOpen(true);
@@ -114,9 +116,9 @@ const ProjectCard = ({ slide }) => {
         handleClose={handleClose}
         modalOpen={modalOpen}
       >
-        <Grid container>
+        <Grid container className={classes.innerContainer}>
           <Grid item xs={12} className={classes.title}>
-            <h3>{name}</h3>
+            <h3 id='modal-title'>{name}</h3>
           </Grid>
           <Grid item xs={12} className={classes.video}>
             <img
@@ -130,6 +132,7 @@ const ProjectCard = ({ slide }) => {
             xs={12}
             sm={repo || liveSite ? 8 : 12}
             className={classes.about}
+            id='modal-description'
           >
             <h4>Background:</h4> <p>{detail1}</p> {detail2 && <p>{detail2}</p>}
             <h4>Built with:</h4>

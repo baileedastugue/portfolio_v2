@@ -44,7 +44,7 @@ const Resume = (props) => {
               <br />
               <br />
               Contributed to Salesforce SiteGenesis code base to improve
-              eCommerce site using CI/CD methodologies and collaborating with
+              eCommerce site using Agile methodologies and collaborating with
               overseas development team.
               <br />
               <br />

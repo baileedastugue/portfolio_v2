@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
     padding: '3px 0 3px 3px',
     margin: '1vh auto',
     [theme.breakpoints.up(1024)]: {
-      marginBottom: '7%',
+      margin: '2vh auto',
     },
   }),
   alignTextEnd: {
@@ -40,7 +40,6 @@ const CarouselContainer = (props) => {
   const prevCard = useCallback(() => {
     setXPosition(xPosition + slideWidth);
     setIndex(index - 1);
-    console.log(index);
   }, [xPosition, slideWidth, index]);
 
   const theme = useTheme();
@@ -100,6 +99,7 @@ const CarouselContainer = (props) => {
           setSlideWidth={setSlideWidth}
           xPosition={xPosition}
           index={index}
+          slidesShowing={slidesShowing}
         >
           {props.children}
         </CarouselSlider>
