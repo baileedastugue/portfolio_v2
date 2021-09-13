@@ -18,10 +18,11 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.background.paper,
     border: '1px solid #000',
     boxShadow: theme.shadows[5],
+    display: 'flex',
     padding: '5%',
     height: '100vh',
     [theme.breakpoints.up(1024)]: {
-      padding: '5% 20%',
+      padding: '5% 30%',
     },
   },
   closeBtn: {
