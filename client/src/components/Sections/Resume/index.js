@@ -38,32 +38,30 @@ const Resume = (props) => {
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
-              Coded transactional marketing emails using Java, Apache FreeMarker
-              template engine, HTML, and CSS in a cross-functional endeavor
+              Coded transactional marketing emails using Apache FreeMarker
+              template engine, HTML, and CSS in a departmental endeavor
               resulting in streamlined email delivery to customers.
               <br />
               <br />
-              Contributed to Salesforce SiteGenesis code base to improve
-              eCommerce site using Agile methodologies and collaborating with
-              overseas development team.
+              Contributed to the Salesforce SiteGenesis code base to improve
+              eCommerce site, collaborating with remote development and QA teams
+              in an Agile environment.
               <br />
               <br />
-              Developed an Image Uploader Tool for eCommerce that enabled the
-              team to upload, store, and access images and videos hosted on
-              Cloudinary without providing them full access to the shared
-              business account. This ensured optimized asset URLs were utilized
-              on the site which improved performance and prevented impact to
-              other assets hosted within the account.
+              Developed an Image Uploader Tool for the eCommerce department that
+              enabled the team to upload, store, and access images and videos
+              hosted on Cloudinary without providing access to the shared
+              business account.
               <br />
               <br />
-              Trained web merchandising team on custom integrations and authored
-              technical runbooks and extensive process documentation that was
-              understood and used by a non-technical audience.
+              Trained web merchandising department on custom integrations and
+              authored technical runbooks and extensive process documentation
+              that was understood and used by a non-technical audience.
               <br />
               <br />
               Acted as interim project manager for Color Bar and Engraving
-              initiatives, ensuring legality, on-time product launches, and
-              successful release of a new reference implementation.
+              initiatives, executing product launches, ensuring compliance, and
+              successfully releasing a new reference implementation.
             </Typography>
           </AccordionDetails>
         </Accordion>
@@ -76,16 +74,19 @@ const Resume = (props) => {
             <Typography>Kendra Scott - Junior Front End Developer</Typography>
           </AccordionSummary>
           <AccordionDetails>
-            Developed 19 full homepage refreshes and 105 additional banners,
-            landing pages, and category headers while collaborating with web
-            merchandising, email marketing, creative, and copy teams, complying
-            with ADA standards for all code, and responding to emerging business
-            needs.
+            Developed 19 comprehensive homepage refreshes with 105 additional
+            banners, landing pages, and category headers while collaborating
+            with web merchandising, creative, and copy teams in response to
+            emerging business needs.
             <br />
             <br />
-            Ensured ADA-compliance on all homepage updates resulting in zero
-            homepage compliance violations and consulted on accessibility
-            improvements and requirements across the site.
+            Delivered 24 engraving products while working with third-party
+            vendors and improving customer experience by ensuring the front-end
+            rendering matches the physical engraving.
+            <br />
+            <br />
+            Launched 9 custom Color Bar products and 8 Color Bar stones aligning
+            with retail launches.
             <br />
             <br />
             Coded reusable, flexible, and ADA-compliant category header
@@ -94,11 +95,9 @@ const Resume = (props) => {
             vitals.
             <br />
             <br />
-            Delivered 24 engraving products on schedule and added a new font
-            while working with third-party vendors and improving customer
-            experience by ensuring the front-end rendering matches the physical
-            engraving. Launched 9 custom Color Bar products and 8 Color Bar
-            stones on schedule.
+            Ensured ADA-compliance on all homepage updates resulting in zero
+            homepage compliance violations while consulting on accessibility
+            improvements and requirements across the site.
           </AccordionDetails>
         </Accordion>
         <Accordion>
@@ -108,19 +107,19 @@ const Resume = (props) => {
             id='privateTutor-header'
           >
             <Typography>
-              Trilogy Education - Full Stack Private Tutor
+              Trilogy Education - Full Stack Bootcamp Tutor
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
-            Taught current Trilogy bootcamp students a wide range of topics
-            depending on their needs, focusing on a foundational understanding
-            of topics and gradually building in complexity, resulting in greater
-            comprehension and more prepared graduates.
+            Taught Trilogy bootcamp students a wide range of topics depending on
+            their needs, focusing on a foundational understanding of topics and
+            gradually building in complexity, resulting in greater comprehension
+            and more prepared graduates.
             <br />
             <br />
             Maintained a roster of students, organized a complex scheduling
-            system in order to ensure student’s personal needs are met, &
-            communicated consistently and clearly to each student
+            system, ensured student’s individual needs were met, & communicated
+            consistently and clearly to each student.
           </AccordionDetails>
         </Accordion>
         <Accordion className={classes.lastAccordion}>
