@@ -31,73 +31,54 @@ const Resume = (props) => {
         <Accordion>
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
-            aria-controls='leadFEDeveloper-content'
-            id='leadFEDeveloper-header'
+            aria-controls='frontendDeveloper-content'
+            id='frontendDeveloper-header'
           >
-            <Typography>Kendra Scott - Lead Front End Developer</Typography>
+            <Typography>Kendra Scott - Front End Developer</Typography>
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
-              Coded transactional marketing emails using Apache FreeMarker
-              template engine, HTML, and CSS in a departmental endeavor
-              resulting in streamlined email delivery to customers.
+              Developed 19 comprehensive homepage refreshes with 106 additional
+              banners, landing pages, and category headers in response to
+              emerging business needs while collaborating with web
+              merchandising, creative, and copy teams to produce branded,
+              responsive web content.
               <br />
               <br />
-              Contributed to the Salesforce SiteGenesis code base to improve
-              eCommerce site, collaborating with remote development and QA teams
-              in an Agile environment.
+              Owned the delivery of 24 engraving products on the site while
+              working closely with photography, distribution center, and
+              merchandising teams to ensure a high-quality frontend rendering
+              that matched the physical engraving result.
               <br />
               <br />
-              Developed an Image Uploader Tool for the eCommerce department that
-              enabled the team to upload, store, and access images and videos
-              hosted on Cloudinary without providing access to the shared
-              business account.
+              Launched 9 custom Color Bar products and 8 Color Bar stones
+              aligning with retail launches.
+              <br />
+              <br />
+              Built a custom Image Uploader solution using React, Node.js,
+              MongoDB, and Express.js for the eCommerce department that enabled
+              the team to upload, store, and access images and videos hosted on
+              Cloudinary without providing access to the shared business
+              account.
+              <br />
+              <br />
+              Coded transactional marketing emails using Apache FreeMarker,
+              HTML, and CSS in a departmental endeavor resulting in streamlined
+              email delivery to customers.
+              <br />
+              <br />
+              Developed reusable, flexible, and ADA-compliant category header
+              templates for the eCommerce team that decreased product listing
+              page load times, decreased cumulative layout shift, and improved
+              core web vitals. Ensured ADA-compliance on all homepage updates
+              resulting in zero homepage compliance violations while consulting
+              on accessibility improvements and requirements across the site.
               <br />
               <br />
               Trained web merchandising department on custom integrations and
-              authored technical runbooks and extensive process documentation
-              that was understood and used by a non-technical audience.
-              <br />
-              <br />
-              Acted as interim project manager for Color Bar and Engraving
-              initiatives, executing product launches, ensuring compliance, and
-              successfully releasing a new reference implementation.
+              authored technical runbooks that were understood and used by a
+              non-technical audience.
             </Typography>
-          </AccordionDetails>
-        </Accordion>
-        <Accordion>
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
-            aria-controls='juniorFEDeveloper-content'
-            id='juniorFEDeveloper-header'
-          >
-            <Typography>Kendra Scott - Junior Front End Developer</Typography>
-          </AccordionSummary>
-          <AccordionDetails>
-            Developed 19 comprehensive homepage refreshes with 105 additional
-            banners, landing pages, and category headers while collaborating
-            with web merchandising, creative, and copy teams in response to
-            emerging business needs.
-            <br />
-            <br />
-            Delivered 24 engraving products while working with third-party
-            vendors and improving customer experience by ensuring the front-end
-            rendering matches the physical engraving.
-            <br />
-            <br />
-            Launched 9 custom Color Bar products and 8 Color Bar stones aligning
-            with retail launches.
-            <br />
-            <br />
-            Coded reusable, flexible, and ADA-compliant category header
-            templates for the eCommerce team that decreased product listing page
-            load times, decreased cumulative layout shift, and improved core web
-            vitals.
-            <br />
-            <br />
-            Ensured ADA-compliance on all homepage updates resulting in zero
-            homepage compliance violations while consulting on accessibility
-            improvements and requirements across the site.
           </AccordionDetails>
         </Accordion>
         <Accordion>
