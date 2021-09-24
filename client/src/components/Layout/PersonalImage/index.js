@@ -1,5 +1,7 @@
 import React, { Fragment } from 'react';
 import { makeStyles } from '@material-ui/styles';
+import PersonalImg from './personalImg.jpg';
+import BellaImg from './bellaImg.jpeg';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -9,8 +11,7 @@ const useStyles = makeStyles((theme) => ({
     height: '150px',
     width: '150px',
     borderRadius: '100%',
-    backgroundImage:
-      'url(https://res.cloudinary.com/dp9ndx3oj/image/upload/v1631408308/bdastugue/Bailee.jpg)',
+    backgroundImage: `url(${PersonalImg})`,
     backgroundSize: 'cover',
     [theme.breakpoints.up(375)]: {
       bottom: '-10px',
@@ -64,8 +65,7 @@ const useStyles = makeStyles((theme) => ({
       right: '200px',
       height: '110px',
       width: '110px',
-      backgroundImage:
-        'url(https://res.cloudinary.com/dp9ndx3oj/image/upload/v1631190584/bdastugue/Bellatrix.jpg)',
+      backgroundImage: `url(${BellaImg})`,
       backgroundSize: 'cover',
       backgroundPosition: 'top right',
       borderColor: theme.palette.primary.light,

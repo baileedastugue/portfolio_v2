@@ -38,21 +38,27 @@ const Resume = (props) => {
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
-              Developed 19 comprehensive homepage refreshes with 106 additional
-              banners, landing pages, and category headers in response to
-              emerging business needs while collaborating with web
+              Responsible for 19 comprehensive homepage refreshes and 106
+              additional banners, landing pages, and category headers that
+              responded to emerging business needs in collaboration with web
               merchandising, creative, and copy teams to produce branded,
               responsive web content.
               <br />
               <br />
+              Owned ADA-compliance on all homepage updates resulting in zero
+              homepage compliance violations while consulting on accessibility
+              improvements and requirements across the site.
+              <br />
+              <br />
               Owned the delivery of 24 engraving products on the site while
-              working closely with photography, distribution center, and
-              merchandising teams to ensure a high-quality frontend rendering
-              that matched the physical engraving result.
+              working closely with photography, merchandising, and distribution
+              center teams to ensure a high-quality frontend rendering that
+              matched the physical engraving result.
               <br />
               <br />
-              Launched 9 custom Color Bar products and 8 Color Bar stones
-              aligning with retail launches.
+              Launched 8 personalizable Color Bar products and 7 Color Bar
+              stones aligning with retail launches and utilizing a custom
+              application that allowed customers to design an original piece.
               <br />
               <br />
               Built a custom Image Uploader solution using React, Node.js,
@@ -70,14 +76,12 @@ const Resume = (props) => {
               Developed reusable, flexible, and ADA-compliant category header
               templates for the eCommerce team that decreased product listing
               page load times, decreased cumulative layout shift, and improved
-              core web vitals. Ensured ADA-compliance on all homepage updates
-              resulting in zero homepage compliance violations while consulting
-              on accessibility improvements and requirements across the site.
+              core web vitals.
               <br />
               <br />
               Trained web merchandising department on custom integrations and
-              authored technical runbooks that were understood and used by a
-              non-technical audience.
+              authored technical runbooks to be used by a non-technical
+              audience.
             </Typography>
           </AccordionDetails>
         </Accordion>
@@ -98,9 +102,8 @@ const Resume = (props) => {
             and more prepared graduates.
             <br />
             <br />
-            Maintained a roster of students, organized a complex scheduling
-            system, ensured student’s individual needs were met, & communicated
-            consistently and clearly to each student.
+            Organized a complex scheduling system, maintained a roster of
+            students, and communicated consistently and clearly to each student.
           </AccordionDetails>
         </Accordion>
         <Accordion className={classes.lastAccordion}>
