@@ -1,8 +1,19 @@
-[
+[  {
+  "id": 2,
+  "name": "Prioritized",
+  "videoUrl": "https://res.cloudinary.com/dp9ndx3oj/image/upload/f_auto,q_auto/v1631410388/bdastugue/prioritized.png",
+  "videoDescription": "",
+  "detail1": "Your to-do list, your calendar, and your personal Kanban board all in one place. This application allows users to create events and reminders with priority level, progress status, and life segment. Events and reminders for a specific date are aggregated in a Kanban-style board where users can see the day’s tasks that are currently in progress, have been completed, or haven't been started and all backlogged reminders.",
+  "detail2": "Additional functionality includes user creation and sign in, editing events and reminders, changing the date, deleting events and reminders, and one-click progress status change for reminders.",
+  "techUsed": ["React", "NodeJS", "Postgres", "Express", "Redux", "Material UI", "BCrypt", "pgAdmin", "Postman", "JSON Web Token"],
+  "liveSite": "http://prioritized-list.herokuapp.com/",
+  "repo": "https://github.com/baileedastugue/prioritized",
+  "nextSteps": "Filtering by progress state, life segment, or priority level, creating a \"Focus\" for the day, viewing Kanban board for a user-specified timeframe, viewing the day's tasks for a user-specified timeframe, improved default functionality for creating and reminders, enhanced form validation for creating and editing events and reminders"
+},
   {
-    "id": 0,
+    "id": 1,
     "name": "Elephant's Memory",
-    "videoUrl": "https://res.cloudinary.com/dp9ndx3oj/image/upload/v1631410388/bdastugue/ElephantsMemory.png",
+    "videoUrl": "https://res.cloudinary.com/dp9ndx3oj/image/upload/f_auto,q_auto/v1631410388/bdastugue/ElephantsMemory.png",
     "videoDescription": "",
     "detail1": "A collaborative, private and digital memory album. This application allows users to create memory albums that others with the link can also contribute to. Memory posts include uploading a picture with a caption or a text prompt and response. Users can protect their albums and the posts within those albums with an encrypted password.",
     "detail2": "Additional functionality includes changing user passwords, deleting user account, deleting albums, changing album names, adding, updating, or removing album passwords, and deleting memory posts. Both user and album passwords are encrypted though BCrypt.",
@@ -12,9 +23,9 @@
     "nextSteps": "Expanding memory posts to include video functionality, creating a notification center that alerts users when a memory post has been added to their album, allowing users to update album URLs with a personalized or randomized album ID"
   },
   {
-    "id": 1,
+    "id": 0,
     "name": "Image Uploader Tool",
-    "videoUrl": "https://res.cloudinary.com/dp9ndx3oj/image/upload/v1631410388/bdastugue/ImageUploader.png",
+    "videoUrl": "https://res.cloudinary.com/dp9ndx3oj/image/upload/f_auto,q_auto/v1631410388/bdastugue/ImageUploader.png",
     "videoDescription": "",
     "detail1": "A tool that allows the user to upload images and videos to be hosted on the business Cloudinary account. This full-stack MERN application allows users to create albums for organization, upload up to 10 images and videos at a time, and copy the optimized image URL address at the click of a button. Image URLs are transformed to include additional parameters to ensure performant and optimized images.",
     "detail2": "The purpose of this application was to develop functionality to upload and host creative assets, without giving additional users full access to the business account. Through this application, the eCommerce team was able to host images while maintaining the guardrails of limited account access.",
