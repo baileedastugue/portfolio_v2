@@ -31,6 +31,42 @@ const Resume = (props) => {
         <Accordion>
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
+            aria-controls='hebSoftwareEngineer-content'
+            id='hebSoftwareEngineer-header'
+          >
+            <Typography>H-E-B Digital - Software Engineer</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography>
+              Directed and launched new internal application “H-E-B Cares
+              Connector” using a React and React Context frontend with a
+              Salesforce backend, allowing for +145K H-E-B & Favor Partners to
+              digitally access company-provided options for mental healthcare in
+              English and Spanish.
+              <br />
+              <br />
+              Developed custom, automated vendor metrics reports with Apex, the
+              Reports and Dashboards API for Apex, and SOQL, providing detailed
+              oversight on +30 tier 1 vendors while saving ~1,500 annual labor
+              hours for the vendor management department.
+              <br />
+              <br />
+              Developed bespoke “Request & Feedback” functionality using
+              Lightning Web Components and Apex to centralize all vendor
+              communication while improving exception processing.
+              <br />
+              <br />
+              Collaborated with an agile team of 4 software engineers to expand
+              the internal “My Facility” application through development of
+              net-new refrigerant management software that reduces maintenance
+              and material costs, tracks fugitive emissions, and resolves audit
+              inquiries.
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+        <Accordion>
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon />}
             aria-controls='frontendDeveloper-content'
             id='frontendDeveloper-header'
           >
@@ -38,7 +74,7 @@ const Resume = (props) => {
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
-              Responsible for 19 comprehensive homepage refreshes and 106
+              Responsible for 19 comprehensive homepage refreshes and 110
               additional banners, landing pages, and category headers that
               responded to emerging business needs in collaboration with web
               merchandising, creative, and copy teams to produce branded,
@@ -50,13 +86,13 @@ const Resume = (props) => {
               improvements and requirements across the site.
               <br />
               <br />
-              Owned the delivery of 24 engraving products on the site while
+              Owned the delivery of 42 engraving products on the site while
               working closely with photography, merchandising, and distribution
               center teams to ensure a high-quality frontend rendering that
               matched the physical engraving result.
               <br />
               <br />
-              Launched 8 personalizable Color Bar products and 7 Color Bar
+              Launched 15 personalizable Color Bar products and 9 Color Bar
               stones aligning with retail launches and utilizing a custom
               application that allowed customers to design an original piece.
               <br />

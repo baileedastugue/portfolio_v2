@@ -9,26 +9,26 @@
   },
   {
     "id": 2,
-    "tech": "CSS and Sass"
-  },
-  {
-    "id": 3,
-    "tech": "Semantic HTML"
-  },
-  {
-    "id": 4,
     "tech": "NodeJS"
   },
   {
+    "id": 3,
+    "tech": "CSS and Sass"
+  },
+  {
+    "id": 4,
+    "tech": "Java-based Apex"
+  },
+  {
     "id": 5,
-    "tech": "Redux"
+    "tech": "Semantic HTML"
   },
   {
     "id": 6,
-    "tech": "MongoDB"
+    "tech": "Redux and React Context"
   },
   {
     "id": 7,
-    "tech": "Express"
+    "tech": "SQL and MongoDB"
   }
 ]
