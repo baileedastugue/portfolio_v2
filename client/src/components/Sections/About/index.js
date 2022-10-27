@@ -14,14 +14,15 @@ const About = (props) => {
     <Box id={props.id} style={{ paddingTop: '120px', marginTop: '-120px' }}>
       <Typography variant='h2'>About Bailee,</Typography>
       <Typography paragraph className={classes.paragraph}>
-        As a developer, I engage the same part of my brain that loves organic
-        chemistry and the part that needs text to be vertically and horizontally
-        centered. While I gravitate towards the front end, I'm willing, able,
-        and excited to tackle the full stack. My positive attitude is a constant
-        - I start every scrum with a "good morning", no matter how many blockers
-        I have to report that day. My attention to detail, my ability to
-        communicate cross functionally from designer to developer, and my focus
-        on business priorities makes me an asset to any team.
+        As a full stack software engineer, I engage the same part of my brain
+        that loves organic chemistry and the part that needs text to be
+        vertically and horizontally centered. While I gravitate towards the
+        front end, I'm willing, able, and excited to tackle the full stack. My
+        positive attitude is a constant - I start every scrum with a "good
+        morning", no matter how many blockers I have to report that day. My
+        attention to detail, my ability to communicate cross functionally from
+        designer to developer, and my focus on business priorities makes me an
+        asset to any team.
       </Typography>
       <Typography paragraph className={classes.paragraph}>
         In my free time, I'm watching Star Trek with my husband, teaching myself

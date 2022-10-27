@@ -63,7 +63,7 @@ const Welcome = (props) => {
 
   const animateText = useCallback(() => {
     const animatedList = [
-      'customer-focused,',
+      'a software engineer,',
       'a pixel-perfectionist,',
       'an accessibility advocate,',
       'Bailee Dastugue',
